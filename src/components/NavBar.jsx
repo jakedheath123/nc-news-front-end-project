@@ -1,10 +1,13 @@
 import React from "react";
+import { Link } from "@reach/router";
 
 const NavBar = () => {
   return (
     <nav>
       <ul>
-        <li>Home</li>
+        <Link to="/">
+          <li>Home</li>
+        </Link>
       </ul>
     </nav>
   );
