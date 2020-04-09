@@ -24,7 +24,15 @@ class ArticleList extends Component {
     ]
   };
   render() {
-    return <div></div>;
+    const { articles } = this.state;
+
+    return (
+      <ul>
+        {articles.map(article => {
+          return <ArticleCard article={article} />;
+        })}
+      </ul>
+    );
   }
 }
 
