@@ -30,7 +30,7 @@ class ArticleList extends Component {
     return (
       <ul>
         {articles.map(article => {
-          return <ArticleCard article={article} />;
+          return <ArticleCard key={article.article_id} article={article} />;
         })}
       </ul>
     );
