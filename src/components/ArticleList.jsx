@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ArticleCard from "./ArticleCard";
 
 class ArticleList extends Component {
   state = {
