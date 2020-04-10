@@ -5,10 +5,10 @@ const ArticleCard = props => {
   const { title, author, article_id } = props.article;
   return (
     <li>
-      <Link to={`/article/${article_id}`}>
-        <h2>{title}</h2>
-      </Link>
-      <h3>Author: {author}</h3>
+      <h3>
+        <Link to={`/article/${article_id}`}>{title}</Link>
+      </h3>
+      <h4>Author: {author}</h4>
     </li>
   );
 };
