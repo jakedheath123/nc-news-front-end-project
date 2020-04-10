@@ -7,7 +7,7 @@ import ArticleList from "./components/ArticleList";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Header />
       <NavBar />
       <Router>
