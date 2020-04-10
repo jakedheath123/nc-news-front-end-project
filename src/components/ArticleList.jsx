@@ -17,7 +17,7 @@ class ArticleList extends Component {
 
     return (
       <>
-        <SearchArticleByAuthor />
+        <SearchArticleByAuthor searchByAuthor={this.searchByAuthor} />
         <ul>
           <h2>Articles:</h2>
           {articles.map(article => {
@@ -27,6 +27,8 @@ class ArticleList extends Component {
       </>
     );
   }
+
+  searchByAuthor = () => {};
 
   fetchAllArticles = () => {
     api.getAllArticles().then(response => {
