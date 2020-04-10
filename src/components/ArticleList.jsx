@@ -43,7 +43,9 @@ class ArticleList extends Component {
   }
 
   fetchAllArticles = () => {
-    api.getAllArticles();
+    api.getAllArticles().then(response => {
+      console.log(response);
+    });
   };
 }
 
