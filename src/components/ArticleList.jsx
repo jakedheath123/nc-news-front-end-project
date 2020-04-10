@@ -25,7 +25,9 @@ class ArticleList extends Component {
 
   fetchAllArticles = () => {
     api.getAllArticles().then(response => {
-      console.log(response);
+      this.setState({
+        articles: response
+      });
     });
   };
 }
