@@ -26,6 +26,10 @@ class ArticleList extends Component {
     ]
   };
 
+  componentDidMount() {
+    this.fetchAllArticles();
+  }
+
   render() {
     const { articles } = this.state;
 
