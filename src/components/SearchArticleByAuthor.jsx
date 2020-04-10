@@ -12,11 +12,19 @@ export default class SearchArticleByAuthor extends Component {
     });
   };
 
+  handleSubmit = event => {
+    event.preventDefault();
+    this.props.searchByAuthor(this.state.input);
+    this.setState({
+      input: ""
+    });
+  };
+
   render() {
     const { input } = this.state;
 
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <label>
           Search By Author:
           <input
