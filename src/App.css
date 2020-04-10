@@ -21,3 +21,8 @@ body {
   margin: 30px 50px;
   line-height: 1.4;
 }
+
+.wrapper {
+  display: grid;
+  grid-gap: 1rem;
+}
