@@ -5,7 +5,7 @@ const ArticleCard = props => {
   return (
     <li>
       <h2>{title}</h2>
-      <h3>{author}</h3>
+      <h3>Author: {author}</h3>
     </li>
   );
 };
