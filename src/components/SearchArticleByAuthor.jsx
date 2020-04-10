@@ -4,6 +4,11 @@ export default class SearchArticleByAuthor extends Component {
   state = {
     input: ""
   };
+
+  handleChange = event => {
+    console.log(event);
+  };
+
   render() {
     const { input } = this.state;
 
@@ -11,7 +16,13 @@ export default class SearchArticleByAuthor extends Component {
       <form>
         <label>
           Search By Author:
-          <input type="text" name="input" value={input} placeholder="Name" />
+          <input
+            type="text"
+            name="input"
+            value={input}
+            placeholder="Name"
+            onChange={this.handleChange}
+          />
         </label>
       </form>
     );
