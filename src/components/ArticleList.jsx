@@ -36,6 +36,10 @@ class ArticleList extends Component {
       </ul>
     );
   }
+
+  fetchAllArticles = () => {
+    api.getAllArticles();
+  };
 }
 
 export default ArticleList;
