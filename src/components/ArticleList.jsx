@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ArticleCard from "./ArticleCard";
 import * as api from "../utils/api";
+import SearchArticleByAuthor from "./SearchArticleByAuthor";
 
 class ArticleList extends Component {
   state = {
@@ -15,13 +16,15 @@ class ArticleList extends Component {
     const { articles } = this.state;
 
     return (
-      <ul>
-        <h2>Articles:</h2>
-
-        {articles.map(article => {
-          return <ArticleCard key={article.article_id} article={article} />;
-        })}
-      </ul>
+      <>
+        <SearchArticleByAuthor />
+        <ul>
+          <h2>Articles:</h2>
+          {articles.map(article => {
+            return <ArticleCard key={article.article_id} article={article} />;
+          })}
+        </ul>
+      </>
     );
   }
 
