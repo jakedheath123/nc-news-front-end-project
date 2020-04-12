@@ -7,7 +7,7 @@ export default class SingleArticleComments extends Component {
   };
 
   componentDidMount() {
-    api.getSingleArticleComments();
+    api.getSingleArticleComments(this.props.article_id);
   }
 
   render() {
