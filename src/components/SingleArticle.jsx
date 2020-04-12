@@ -17,7 +17,7 @@ export default class SingleArticle extends Component {
     return (
       <main>
         <SingleArticleCard article={article} />
-        <SingleArticleComments />
+        <SingleArticleComments article={article} />
       </main>
     );
   }
