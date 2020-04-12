@@ -16,7 +16,9 @@ export default class SingleArticle extends Component {
 
   fetchSingleArticle = () => {
     api.getSingleArticle(this.props.article_id).then(response => {
-      console.log(response);
+      this.setState({
+        article: response
+      });
     });
   };
 }
