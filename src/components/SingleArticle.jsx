@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
+import SingleArticleCard from "./SingleArticleCard";
 
 export default class SingleArticle extends Component {
   state = {
@@ -11,7 +12,11 @@ export default class SingleArticle extends Component {
   }
 
   render() {
-    return <div></div>;
+    return (
+      <main>
+        <SingleArticleCard />
+      </main>
+    );
   }
 
   fetchSingleArticle = () => {
