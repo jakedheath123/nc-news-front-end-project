@@ -5,7 +5,8 @@ import SingleArticleComments from "./SingleArticleComments";
 
 export default class SingleArticle extends Component {
   state = {
-    article: {}
+    article: {},
+    isLoading: true
   };
 
   componentDidMount() {
@@ -13,7 +14,8 @@ export default class SingleArticle extends Component {
   }
 
   render() {
-    const { article } = this.state;
+    const { article, isLoading } = this.state;
+    if (isLoading) return <p>LOADING...</p>;
     return (
       <main>
         <SingleArticleCard article={article} />
@@ -25,7 +27,8 @@ export default class SingleArticle extends Component {
   fetchSingleArticle = () => {
     api.getSingleArticle(this.props.article_id).then(response => {
       this.setState({
-        article: response
+        article: response,
+        isLoading: false
       });
     });
   };
