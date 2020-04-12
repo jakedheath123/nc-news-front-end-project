@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 
-export default class s extends Component {
+export default class SingleArticle extends Component {
+  state = {
+    article: {}
+  };
+
   render() {
     return <div></div>;
   }
+
+  fetchSingleArticle = () => {};
 }
