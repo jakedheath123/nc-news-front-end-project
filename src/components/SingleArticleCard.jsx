@@ -1,6 +1,6 @@
 import React from "react";
 import { dateConverter } from "../utils/utils";
-import { Link } from "@reach/router";
+// import { Link } from "@reach/router";
 
 const SingleArticleCard = props => {
   const {
