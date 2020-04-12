@@ -12,6 +12,7 @@ function App() {
       <NavBar />
       <Router>
         <ArticleList path="/" />
+        <SingleArticle path="/article/:article_id" />
       </Router>
     </div>
   );
