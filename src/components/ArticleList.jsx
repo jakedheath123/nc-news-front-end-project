@@ -28,7 +28,13 @@ class ArticleList extends Component {
     );
   }
 
-  searchByAuthor = () => {};
+  searchByAuthor = author => {
+    api.getArticleByAuthor(author).then(response => {
+      this.setState({
+        articles: response
+      });
+    });
+  };
 
   fetchAllArticles = () => {
     api.getAllArticles().then(response => {
