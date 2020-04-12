@@ -32,8 +32,7 @@ class ArticleList extends Component {
   searchByAuthor = author => {
     api.getArticleByAuthor(author).then(response => {
       this.setState({
-        articles: response,
-        isLoading: false
+        articles: response
       });
     });
   };
@@ -41,7 +40,8 @@ class ArticleList extends Component {
   fetchAllArticles = () => {
     api.getAllArticles().then(response => {
       this.setState({
-        articles: response
+        articles: response,
+        isLoading: false
       });
     });
   };
