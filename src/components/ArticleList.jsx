@@ -14,8 +14,8 @@ class ArticleList extends Component {
   }
 
   render() {
-    const { articles } = this.state;
-
+    const { articles, isLoading } = this.state;
+    if (isLoading) return <p>LOADING...</p>;
     return (
       <>
         <SearchArticleByAuthor searchByAuthor={this.searchByAuthor} />
