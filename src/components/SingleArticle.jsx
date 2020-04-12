@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
 import SingleArticleCard from "./SingleArticleCard";
+import SingleArticleComments from "./SingleArticleComments";
 
 export default class SingleArticle extends Component {
   state = {
@@ -16,6 +17,7 @@ export default class SingleArticle extends Component {
     return (
       <main>
         <SingleArticleCard article={article} />
+        <SingleArticleComments />
       </main>
     );
   }
