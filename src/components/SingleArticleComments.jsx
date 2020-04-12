@@ -12,6 +12,8 @@ export default class SingleArticleComments extends Component {
   }
 
   render() {
+    const { isLoading } = this.state;
+    if (isLoading) return <p>LOADING....</p>;
     return <div></div>;
   }
 }
