@@ -26,4 +26,15 @@ const getSingleArticle = article_id => {
     });
 };
 
-module.exports = { getAllArticles, getArticleByAuthor, getSingleArticle };
+const getSingleArticleComments = article_id => {
+  return request.get(`/articles/${article_id}/comments`).then(({ data }) => {
+    console.log(data);
+  });
+};
+
+module.exports = {
+  getAllArticles,
+  getArticleByAuthor,
+  getSingleArticle,
+  getSingleArticleComments
+};
