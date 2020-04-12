@@ -5,7 +5,8 @@ import SearchArticleByAuthor from "./SearchArticleByAuthor";
 
 class ArticleList extends Component {
   state = {
-    articles: []
+    articles: [],
+    isLoading: true
   };
 
   componentDidMount() {
