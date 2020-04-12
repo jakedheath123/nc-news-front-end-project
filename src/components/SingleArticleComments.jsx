@@ -3,7 +3,8 @@ import * as api from "../utils/api";
 
 export default class SingleArticleComments extends Component {
   state = {
-    comments: []
+    comments: [],
+    isLoading: true
   };
 
   componentDidMount() {
