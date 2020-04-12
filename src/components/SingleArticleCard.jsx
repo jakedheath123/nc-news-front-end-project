@@ -26,6 +26,7 @@ const SingleArticleCard = props => {
       <Link to="/">
         <button>Back</button>
       </Link>
+      <hr></hr>
     </article>
   );
 };
