@@ -5,6 +5,10 @@ export default class SingleArticle extends Component {
     article: {}
   };
 
+  componentDidMount() {
+    this.fetchSingleArticle();
+  }
+
   render() {
     return <div></div>;
   }
