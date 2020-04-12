@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import * as api from "../utils/api";
 
 export default class SingleArticle extends Component {
   state = {
@@ -13,5 +14,7 @@ export default class SingleArticle extends Component {
     return <div></div>;
   }
 
-  fetchSingleArticle = () => {};
+  fetchSingleArticle = () => {
+    api.getSingleArticle();
+  };
 }
