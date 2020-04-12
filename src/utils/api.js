@@ -18,4 +18,12 @@ const getArticleByAuthor = author => {
     });
 };
 
-module.exports = { getAllArticles, getArticleByAuthor };
+const getSingleArticle = article_id => {
+  return request
+    .get(`/articles/${article_id}`)
+    .then(({ data: { article } }) => {
+      return article;
+    });
+};
+
+module.exports = { getAllArticles, getArticleByAuthor, getSingleArticle };
