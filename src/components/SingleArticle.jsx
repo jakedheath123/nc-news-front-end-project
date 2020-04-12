@@ -12,9 +12,10 @@ export default class SingleArticle extends Component {
   }
 
   render() {
+    const { article } = this.state;
     return (
       <main>
-        <SingleArticleCard />
+        <SingleArticleCard article={article} />
       </main>
     );
   }
