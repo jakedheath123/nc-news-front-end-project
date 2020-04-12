@@ -10,4 +10,12 @@ const getAllArticles = () => {
   });
 };
 
-module.exports = { getAllArticles };
+const getArticleByAuthor = author => {
+  return request
+    .get(`/articles?author=${author}`)
+    .then(({ data: { articles } }) => {
+      return articles;
+    });
+};
+
+module.exports = { getAllArticles, getArticleByAuthor };
