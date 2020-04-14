@@ -52,7 +52,12 @@ class ArticleList extends Component {
   };
 
   sortArticlesBySelection = selection => {
-    console.log(selection);
+    api.sortAllArticles(selection).then(response => {
+      this.setState({
+        articles: response,
+        isLoading: false
+      });
+    });
   };
 }
 
