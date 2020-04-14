@@ -3,6 +3,7 @@ import ArticleCard from "./ArticleCard";
 import * as api from "../utils/api";
 import SearchArticleByAuthor from "./SearchArticleByAuthor";
 import SortArticlesBy from "./SortArticlesBy";
+import Loader from "./Loader";
 
 class ArticleList extends Component {
   state = {
@@ -16,7 +17,7 @@ class ArticleList extends Component {
 
   render() {
     const { articles, isLoading } = this.state;
-    if (isLoading) return <p>LOADING...</p>;
+    if (isLoading) return <Loader />;
     return (
       <>
         <SearchArticleByAuthor searchByAuthor={this.searchByAuthor} />
