@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
+import SingleArticleCommentsCard from "./SingleArticleCommentsCard";
 
 export default class SingleArticleComments extends Component {
   state = {
@@ -17,7 +18,12 @@ export default class SingleArticleComments extends Component {
     return (
       <section>
         {comments.map(comment => {
-          return <SingleArticleCommentsCard />;
+          return (
+            <SingleArticleCommentsCard
+              key={comment.comment_id}
+              comment={comment}
+            />
+          );
         })}
       </section>
     );
