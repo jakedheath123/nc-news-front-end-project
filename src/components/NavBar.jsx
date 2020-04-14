@@ -7,6 +7,14 @@ export default class NavBar extends Component {
     topics: [],
     isLoading: true
   };
+  componentDidMount() {
+    api.getAllTopics().then(response => {
+      this.setState({
+        topics: response,
+        isLoading: false
+      });
+    });
+  }
 
   render() {
     return (
