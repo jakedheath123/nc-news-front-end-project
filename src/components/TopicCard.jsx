@@ -17,10 +17,10 @@ const TopicCard = props => {
           {title}
         </Link>
       </h2>
-      <h3>Written By : {author}</h3>
-      <h4>Votes : {votes}</h4>
-      <h4>Comment Count : {comment_count}</h4>
+      <h3>Author : {author}</h3>
       <h4>Published : {created_at}</h4>
+      <h4>Comments : {comment_count}</h4>
+      <h4>Votes : {votes}</h4>
       <br></br>
       <hr></hr>
     </li>
