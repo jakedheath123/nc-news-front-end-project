@@ -16,7 +16,7 @@ export default class SingleArticleComments extends Component {
     const { isLoading, comments } = this.state;
     if (isLoading) return <p>LOADING....</p>;
     return (
-      <section>
+      <section className="comments">
         <h2>Comments:</h2>
         {comments.map(comment => {
           return (
