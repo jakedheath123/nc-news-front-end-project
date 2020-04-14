@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import * as api from "../utils/api";
 
 class PostCommentToArticle extends Component {
   state = {
@@ -20,6 +21,11 @@ class PostCommentToArticle extends Component {
       username: user,
       body: comment
     };
+    api.postComment(this.props.article_id, newComment);
+    this.setState({
+      user: "",
+      comment: ""
+    });
   };
 
   render() {
