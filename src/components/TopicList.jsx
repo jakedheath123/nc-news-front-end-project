@@ -19,6 +19,7 @@ export default class TopicList extends Component {
 
   render() {
     const { topics, isLoading } = this.state;
+    if (isLoading) return <p>Loading...</p>;
     return <div></div>;
   }
 
