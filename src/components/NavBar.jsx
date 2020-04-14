@@ -4,8 +4,7 @@ import * as api from "../utils/api";
 
 export default class NavBar extends Component {
   state = {
-    topics: [],
-    isLoading: true
+    topics: []
   };
   componentDidMount() {
     this.fetchAllTopics();
@@ -38,8 +37,7 @@ export default class NavBar extends Component {
   fetchAllTopics = () => {
     api.getAllTopics().then(response => {
       this.setState({
-        topics: response,
-        isLoading: false
+        topics: response
       });
     });
   };
