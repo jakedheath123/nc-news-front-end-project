@@ -21,7 +21,6 @@ const TopicCard = props => {
       <h4>Published : {created_at}</h4>
       <h4>Comments : {comment_count}</h4>
       <h4>Votes : {votes}</h4>
-      <br></br>
       <hr></hr>
     </li>
   );
