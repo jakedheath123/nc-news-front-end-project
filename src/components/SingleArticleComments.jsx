@@ -54,4 +54,6 @@ export default class SingleArticleComments extends Component {
         });
       });
   };
+
+  removeCommentFromList = () => {};
 }
