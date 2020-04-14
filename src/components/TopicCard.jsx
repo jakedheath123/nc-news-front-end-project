@@ -12,7 +12,7 @@ const TopicCard = props => {
   } = props.article;
   return (
     <li>
-      <h2>
+      <h2 className="hvr-underline-from-center">
         <Link to={`/article/${article_id}`}>{title}</Link>
       </h2>
       <h3>Written By : {author}</h3>
