@@ -17,6 +17,7 @@ export default class SingleArticleComments extends Component {
     if (isLoading) return <p>LOADING....</p>;
     return (
       <section>
+        <h2>Comments:</h2>
         {comments.map(comment => {
           return (
             <SingleArticleCommentsCard
