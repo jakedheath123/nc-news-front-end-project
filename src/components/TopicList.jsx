@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
 import TopicCard from "./TopicCard";
+import Loader from "./Loader";
 
 export default class TopicList extends Component {
   state = {
@@ -20,7 +21,7 @@ export default class TopicList extends Component {
 
   render() {
     const { articles, isLoading } = this.state;
-    if (isLoading) return <p>Loading...</p>;
+    if (isLoading) return <Loader />;
     return (
       <ul>
         {articles.map(article => {
