@@ -39,9 +39,11 @@ const getSingleArticle = article_id => {
 };
 
 const getSingleArticleComments = article_id => {
-  return request.get(`/articles/${article_id}/comments`).then(({ data }) => {
-    console.log(data);
-  });
+  return request
+    .get(`/articles/${article_id}/comments`)
+    .then(({ data: { comments } }) => {
+      return comments;
+    });
 };
 
 module.exports = {
