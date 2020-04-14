@@ -40,7 +40,7 @@ class PostCommentToArticle extends Component {
           <input
             name="user"
             value={user}
-            placeholder="enter"
+            placeholder="Name"
             required
             onChange={this.handleChange}
           />
@@ -50,7 +50,7 @@ class PostCommentToArticle extends Component {
           <input
             name="comment"
             value={comment}
-            placeholder="enter"
+            placeholder="Text"
             required
             onChange={this.handleChange}
           />
