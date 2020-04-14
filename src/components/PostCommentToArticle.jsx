@@ -27,6 +27,7 @@ class PostCommentToArticle extends Component {
             required
           />
         </label>
+        <button>Submit Comment</button>
       </form>
     );
   }
