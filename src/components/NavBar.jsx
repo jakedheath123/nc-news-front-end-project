@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import { Link } from "@reach/router";
 
 export default class NavBar extends Component {
+  state = {
+    topics: [],
+    isLoading: true
+  };
+
   render() {
     return (
       <nav className="main-nav">
