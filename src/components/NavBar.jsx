@@ -8,12 +8,7 @@ export default class NavBar extends Component {
     isLoading: true
   };
   componentDidMount() {
-    api.getAllTopics().then(response => {
-      this.setState({
-        topics: response,
-        isLoading: false
-      });
-    });
+    this.fetchAllTopics();
   }
 
   render() {
@@ -27,7 +22,7 @@ export default class NavBar extends Component {
           {topics.map(topic => {
             return (
               <Link className="link" to={`/topics/${topic.slug}`}>
-                <li>Topic: {topic.slug}</li>
+                <li key={topic.slug}>Topic: {topic.slug}</li>
               </Link>
             );
           })}
@@ -35,4 +30,13 @@ export default class NavBar extends Component {
       </nav>
     );
   }
+
+  fetchAllTopics = () => {
+    api.getAllTopics().then(response => {
+      this.setState({
+        topics: response,
+        isLoading: false
+      });
+    });
+  };
 }
