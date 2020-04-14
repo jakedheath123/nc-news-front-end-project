@@ -8,7 +8,11 @@ export default class TopicList extends Component {
   };
 
   componentDidMount() {
-    api.getAllArticles();
+    api.getAllArticles(this.props.slug).then(response => {
+      this.setState({
+        topics: response
+      });
+    });
   }
 
   render() {
