@@ -6,6 +6,8 @@ class PostCommentToArticle extends Component {
     comment: ""
   };
 
+  handleChange = event => {};
+
   render() {
     return (
       <form>
@@ -16,6 +18,7 @@ class PostCommentToArticle extends Component {
             value={this.state.user}
             placeholder="enter"
             required
+            onChange={this.handleChange}
           />
         </label>
         <label>
@@ -25,6 +28,7 @@ class PostCommentToArticle extends Component {
             value={this.state.comment}
             placeholder="enter"
             required
+            onChange={this.handleChange}
           />
         </label>
         <button>Submit Comment</button>
