@@ -17,21 +17,20 @@ export default class NavBar extends Component {
   }
 
   render() {
+    const { topics } = this.state;
     return (
       <nav className="main-nav">
         <ul>
           <Link className="link" to="/">
             <li>Home</li>
           </Link>
-          <Link className="link" to="/topics/football">
-            <li>Topic:Football</li>
-          </Link>
-          <Link className="link" to="/topics/coding">
-            <li>Topic:Coding</li>
-          </Link>
-          <Link className="link" to="/topics/cooking">
-            <li>Topic:Cooking</li>
-          </Link>
+          {topics.map(topic => {
+            return (
+              <Link className="link" to={`/topics/${topic.slug}`}>
+                <li>Topic: {topic.slug}</li>
+              </Link>
+            );
+          })}
         </ul>
       </nav>
     );
