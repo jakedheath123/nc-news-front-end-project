@@ -24,7 +24,7 @@ export default class TopicList extends Component {
     return (
       <ul>
         {articles.map(article => {
-          return <TopicCard />;
+          return <TopicCard key={article.article_id} article={article} />;
         })}
       </ul>
     );
