@@ -21,7 +21,9 @@ class PostCommentToArticle extends Component {
       username: user,
       body: comment
     };
-    api.postComment(this.props.article_id, newComment);
+    api.postComment(this.props.article_id, newComment).then(comment => {
+      this.props.addCommentToList(comment);
+    });
     this.setState({
       user: "",
       comment: ""
