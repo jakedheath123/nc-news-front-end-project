@@ -13,9 +13,18 @@ class PostCommentToArticle extends Component {
     });
   };
 
+  handleSubmit = event => {
+    event.preventDefault();
+    const { user, comment } = this.state;
+    const newComment = {
+      username: user,
+      body: comment
+    };
+  };
+
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <label>
           UserName:
           <input
