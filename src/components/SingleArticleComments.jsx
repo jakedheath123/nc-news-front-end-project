@@ -8,7 +8,7 @@ export default class SingleArticleComments extends Component {
   };
 
   componentDidMount() {
-    api.getSingleArticleComments(this.props.article.article_id);
+    this.fetchSingleArticleComments();
   }
 
   render() {
@@ -16,4 +16,15 @@ export default class SingleArticleComments extends Component {
     if (isLoading) return <p>LOADING....</p>;
     return <div></div>;
   }
+
+  fetchSingleArticleComments = () => {
+    api
+      .getSingleArticleComments(this.props.article.article_id)
+      .then(response => {
+        this.setState({
+          comments: response,
+          isLoading: false
+        });
+      });
+  };
 }
