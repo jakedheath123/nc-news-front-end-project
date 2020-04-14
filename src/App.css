@@ -95,3 +95,7 @@ ul {
   left: 0;
   right: 0;
 }
+
+.comments {
+  border: 2px black solid;
+}
