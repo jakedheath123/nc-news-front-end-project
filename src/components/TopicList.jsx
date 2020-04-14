@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
+import TopicCard from "./TopicCard";
 
 export default class TopicList extends Component {
   state = {
