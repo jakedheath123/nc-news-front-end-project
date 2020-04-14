@@ -33,6 +33,7 @@ export default class SearchArticleByAuthor extends Component {
             value={input}
             placeholder="Name"
             onChange={this.handleChange}
+            required
           />
         </label>
         <button>Submit</button>
