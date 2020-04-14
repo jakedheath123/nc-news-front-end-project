@@ -22,10 +22,10 @@ class SortArticlesBy extends Component {
             <select onChange={this.handleChange} value={this.state.selection}>
               <option></option>
               <option name="dateCreated" value="created_at">
-                Published
+                Date Published
               </option>
               <option name="commentCount" value="comment_count">
-                Comments
+                Comment Count
               </option>
               <option name="votes" value="votes">
                 Votes
