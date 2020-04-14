@@ -46,10 +46,19 @@ const getSingleArticleComments = article_id => {
     });
 };
 
+const postComment = (article_id, comment) => {
+  return request
+    .post(`/articles/${article_id}/comments`, comment)
+    .then(({ data: { comment } }) => {
+      return comment;
+    });
+};
+
 module.exports = {
   getAllArticles,
   getArticleByAuthor,
   getSingleArticle,
   getSingleArticleComments,
-  getAllTopics
+  getAllTopics,
+  postComment
 };
