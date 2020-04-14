@@ -54,11 +54,18 @@ const postComment = (article_id, comment) => {
     });
 };
 
+const deleteArticleComment = comment_id => {
+  return request.delete(`/comments/${comment_id}`).then(response => {
+    return response;
+  });
+};
+
 module.exports = {
   getAllArticles,
   getArticleByAuthor,
   getSingleArticle,
   getSingleArticleComments,
   getAllTopics,
-  postComment
+  postComment,
+  deleteArticleComment
 };
