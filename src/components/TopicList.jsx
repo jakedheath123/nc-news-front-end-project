@@ -9,10 +9,27 @@ export default class TopicList extends Component {
 
   componentDidMount() {
     api.getAllArticles(this.props.slug).then(response => {
-      this.setState({
-        topics: response
-      });
+      this.setState(
+        {
+          topics: response,
+          isLoading: false
+        },
+        () => {
+          console.log(this.state.topics);
+        }
+      );
     });
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.slug !== this.props.slug) {
+      api.getAllArticles(this.props.slug).then(response => {
+        this.setState({
+          topics: response,
+          isLoading: false
+        });
+      });
+    }
   }
 
   render() {
