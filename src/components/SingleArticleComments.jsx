@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as api from "../utils/api";
 import SingleArticleCommentsCard from "./SingleArticleCommentsCard";
 import PostCommentToArticle from "./PostCommentToArticle";
+import Loader from "./Loader";
 
 export default class SingleArticleComments extends Component {
   state = {
@@ -15,7 +16,7 @@ export default class SingleArticleComments extends Component {
 
   render() {
     const { isLoading, comments } = this.state;
-    if (isLoading) return <p>LOADING....</p>;
+    if (isLoading) return <Loader />;
     return (
       <section className="comments">
         <h2>Comments:</h2>
