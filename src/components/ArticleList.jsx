@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ArticleCard from "./ArticleCard";
 import * as api from "../utils/api";
 import SearchArticleByAuthor from "./SearchArticleByAuthor";
+import SortArticlesBy from "./SortArticlesBy";
 
 class ArticleList extends Component {
   state = {
@@ -19,6 +20,7 @@ class ArticleList extends Component {
     return (
       <>
         <SearchArticleByAuthor searchByAuthor={this.searchByAuthor} />
+        <SortArticlesBy />
         <ul>
           <h2>Articles:</h2>
           {articles.map(article => {
