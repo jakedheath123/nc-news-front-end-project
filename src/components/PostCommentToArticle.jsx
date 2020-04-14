@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class PostCommentToArticle extends Component {
   state = {
-    name: "",
+    user: "",
     comment: ""
   };
 
@@ -11,11 +11,21 @@ class PostCommentToArticle extends Component {
       <form>
         <label>
           UserName:
-          <input />
+          <input
+            name="user"
+            value={this.state.user}
+            placeholder="enter"
+            required
+          />
         </label>
         <label>
           Comment:
-          <input />
+          <input
+            name="comment"
+            value={this.state.comment}
+            placeholder="enter"
+            required
+          />
         </label>
       </form>
     );
