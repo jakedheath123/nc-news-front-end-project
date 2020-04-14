@@ -1,8 +1,24 @@
 import React, { Component } from "react";
 
 class PostCommentToArticle extends Component {
+  state = {
+    name: "",
+    comment: ""
+  };
+
   render() {
-    return <div></div>;
+    return (
+      <form>
+        <label>
+          UserName:
+          <input />
+        </label>
+        <label>
+          Comment:
+          <input />
+        </label>
+      </form>
+    );
   }
 }
 
