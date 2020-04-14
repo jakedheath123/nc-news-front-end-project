@@ -12,9 +12,15 @@ export default class SingleArticleComments extends Component {
   }
 
   render() {
-    const { isLoading } = this.state;
+    const { isLoading, comments } = this.state;
     if (isLoading) return <p>LOADING....</p>;
-    return <div></div>;
+    return (
+      <section>
+        {comments.map(comment => {
+          return <SingleArticleCommentsCard />;
+        })}
+      </section>
+    );
   }
 
   fetchSingleArticleComments = () => {
