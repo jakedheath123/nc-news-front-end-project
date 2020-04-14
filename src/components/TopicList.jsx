@@ -3,7 +3,7 @@ import * as api from "../utils/api";
 
 export default class TopicList extends Component {
   state = {
-    topics: [],
+    articles: [],
     isLoading: true
   };
 
@@ -18,7 +18,7 @@ export default class TopicList extends Component {
   }
 
   render() {
-    const { topics, isLoading } = this.state;
+    const { articles, isLoading } = this.state;
     if (isLoading) return <p>Loading...</p>;
     return <div></div>;
   }
@@ -26,7 +26,7 @@ export default class TopicList extends Component {
   fetchAllArticlesByTopic = () => {
     api.getAllArticles(this.props.slug).then(response => {
       this.setState({
-        topics: response,
+        articles: response,
         isLoading: false
       });
     });
