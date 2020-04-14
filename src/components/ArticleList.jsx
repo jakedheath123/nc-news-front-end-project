@@ -20,7 +20,9 @@ class ArticleList extends Component {
     return (
       <>
         <SearchArticleByAuthor searchByAuthor={this.searchByAuthor} />
-        <SortArticlesBy />
+        <SortArticlesBy
+          sortArticlesBySelection={this.sortArticlesBySelection}
+        />
         <ul>
           <h2>Articles:</h2>
           {articles.map(article => {
@@ -47,6 +49,10 @@ class ArticleList extends Component {
         isLoading: false
       });
     });
+  };
+
+  sortArticlesBySelection = selection => {
+    console.log(selection);
   };
 }
 
