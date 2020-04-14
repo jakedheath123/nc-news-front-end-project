@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as api from "../utils/api";
 import SingleArticleCard from "./SingleArticleCard";
 import SingleArticleComments from "./SingleArticleComments";
+import ViewToggler from "./ViewToggler";
 
 export default class SingleArticle extends Component {
   state = {
@@ -20,7 +21,9 @@ export default class SingleArticle extends Component {
       <main>
         <SingleArticleCard article={article} />
         <br></br>
-        <SingleArticleComments article={article} />
+        <ViewToggler>
+          <SingleArticleComments article={article} />
+        </ViewToggler>
       </main>
     );
   }
