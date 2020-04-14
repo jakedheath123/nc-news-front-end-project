@@ -24,6 +24,7 @@ export default class SingleArticleComments extends Component {
           article_id={this.props.article.article_id}
           addCommentToList={this.addCommentToList}
         />
+        <hr></hr>
         {comments.map(comment => {
           return (
             <SingleArticleCommentsCard
