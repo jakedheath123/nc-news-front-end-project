@@ -8,6 +8,20 @@ export default class TopicList extends Component {
   };
 
   componentDidMount() {
+    this.fetchAllArticlesByTopic();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.slug !== this.props.slug) {
+      this.fetchAllArticlesByTopic();
+    }
+  }
+
+  render() {
+    return <div></div>;
+  }
+
+  fetchAllArticlesByTopic = () => {
     api.getAllArticles(this.props.slug).then(response => {
       this.setState(
         {
@@ -19,20 +33,5 @@ export default class TopicList extends Component {
         }
       );
     });
-  }
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.slug !== this.props.slug) {
-      api.getAllArticles(this.props.slug).then(response => {
-        this.setState({
-          topics: response,
-          isLoading: false
-        });
-      });
-    }
-  }
-
-  render() {
-    return <div></div>;
-  }
+  };
 }
