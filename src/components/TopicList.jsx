@@ -23,15 +23,10 @@ export default class TopicList extends Component {
 
   fetchAllArticlesByTopic = () => {
     api.getAllArticles(this.props.slug).then(response => {
-      this.setState(
-        {
-          topics: response,
-          isLoading: false
-        },
-        () => {
-          console.log(this.state.topics);
-        }
-      );
+      this.setState({
+        topics: response,
+        isLoading: false
+      });
     });
   };
 }
