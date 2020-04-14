@@ -10,6 +10,12 @@ const getAllArticles = () => {
   });
 };
 
+const getAllTopics = () => {
+  return request.get("/topics").then(({ data: { topics } }) => {
+    return topics;
+  });
+};
+
 const getArticleByAuthor = author => {
   return request
     .get(`/articles?author=${author}`)
@@ -36,5 +42,6 @@ module.exports = {
   getAllArticles,
   getArticleByAuthor,
   getSingleArticle,
-  getSingleArticleComments
+  getSingleArticleComments,
+  getAllTopics
 };
