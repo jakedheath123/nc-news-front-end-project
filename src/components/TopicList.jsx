@@ -20,7 +20,13 @@ export default class TopicList extends Component {
   render() {
     const { articles, isLoading } = this.state;
     if (isLoading) return <p>Loading...</p>;
-    return <div></div>;
+    return (
+      <ul>
+        {articles.map(article => {
+          return <TopicCard />;
+        })}
+      </ul>
+    );
   }
 
   fetchAllArticlesByTopic = () => {
