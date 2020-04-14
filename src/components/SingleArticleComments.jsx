@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
 import SingleArticleCommentsCard from "./SingleArticleCommentsCard";
+import PostCommentToArticle from "./PostCommentToArticle";
 
 export default class SingleArticleComments extends Component {
   state = {
@@ -18,6 +19,7 @@ export default class SingleArticleComments extends Component {
     return (
       <section className="comments">
         <h2>Comments:</h2>
+        <PostCommentToArticle />
         {comments.map(comment => {
           return (
             <SingleArticleCommentsCard
