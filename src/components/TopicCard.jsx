@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "@reach/router";
+import { dateConverter } from "../utils/utils";
 
 const TopicCard = props => {
   const {
@@ -18,7 +19,7 @@ const TopicCard = props => {
         </Link>
       </h2>
       <h3>Author : {author}</h3>
-      <h4>Published : {created_at}</h4>
+      <h4>Published : {dateConverter(created_at)}</h4>
       <h4>Comments : {comment_count}</h4>
       <h4>Votes : {votes}</h4>
       <hr></hr>
