@@ -21,8 +21,12 @@ export default class NavBar extends Component {
           </Link>
           {topics.map(topic => {
             return (
-              <Link className="link" to={`/topics/${topic.slug}`}>
-                <li key={topic.slug}>Topic: {topic.slug}</li>
+              <Link
+                key={topic.slug}
+                className="link"
+                to={`/topics/${topic.slug}`}
+              >
+                <li>Topic: {topic.slug}</li>
               </Link>
             );
           })}
