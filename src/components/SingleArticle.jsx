@@ -3,6 +3,7 @@ import * as api from "../utils/api";
 import SingleArticleCard from "./SingleArticleCard";
 import SingleArticleComments from "./SingleArticleComments";
 import ViewToggler from "./ViewToggler";
+import Loader from "./Loader";
 
 export default class SingleArticle extends Component {
   state = {
@@ -16,7 +17,7 @@ export default class SingleArticle extends Component {
 
   render() {
     const { article, isLoading } = this.state;
-    if (isLoading) return <p>LOADING...</p>;
+    if (isLoading) return <Loader />;
     return (
       <main>
         <SingleArticleCard article={article} />
