@@ -28,6 +28,7 @@ export default class SingleArticleComments extends Component {
             <SingleArticleCommentsCard
               key={comment.comment_id}
               comment={comment}
+              removeCommentFromList={this.removeCommentFromList}
             />
           );
         })}
@@ -55,5 +56,15 @@ export default class SingleArticleComments extends Component {
       });
   };
 
-  removeCommentFromList = () => {};
+  removeCommentFromList = id => {
+    api.deleteArticleComment(id).then(response => {
+      this.setState({
+        comments: [
+          ...this.state.comments.filter(comment => {
+            return comment.comment_id !== id;
+          })
+        ]
+      });
+    });
+  };
 }
