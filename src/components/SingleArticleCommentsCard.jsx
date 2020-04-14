@@ -8,7 +8,9 @@ const SingleArticleCommentsCard = props => {
       <h4>{comment_id}</h4>
       <h4>{votes}</h4>
       <h4>{body}</h4>
-      <button>DELETE COMMENT</button>
+      <button onClick={() => props.removeCommentFromList(comment_id)}>
+        DELETE COMMENT
+      </button>
       <hr></hr>
     </>
   );
