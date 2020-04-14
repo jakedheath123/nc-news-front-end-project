@@ -5,6 +5,14 @@ class SortArticlesBy extends Component {
     selection: ""
   };
 
+  handleChange = event => {
+    const { value } = event.target;
+    this.setState({ selection: value }, () => {
+      if (this.state.selection !== "")
+        this.props.sortArticlesBy(this.state.selection);
+    });
+  };
+
   render() {
     return (
       <>
