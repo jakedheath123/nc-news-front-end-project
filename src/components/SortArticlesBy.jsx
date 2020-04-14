@@ -9,7 +9,7 @@ class SortArticlesBy extends Component {
     const { value } = event.target;
     this.setState({ selection: value }, () => {
       if (this.state.selection !== "")
-        this.props.sortArticlesBy(this.state.selection);
+        this.props.sortArticlesBySelection(this.state.selection);
     });
   };
 
