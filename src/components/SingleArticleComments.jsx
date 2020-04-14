@@ -35,7 +35,14 @@ export default class SingleArticleComments extends Component {
     );
   }
 
-  addCommentToList = () => {};
+  addCommentToList = comment => {
+    this.setState(currentState => {
+      return {
+        comments: [comment, ...currentState.comments],
+        isLoading: false
+      };
+    });
+  };
 
   fetchSingleArticleComments = () => {
     api
