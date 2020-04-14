@@ -19,7 +19,7 @@ export default class SingleArticleComments extends Component {
     return (
       <section className="comments">
         <h2>Comments:</h2>
-        <PostCommentToArticle />
+        <PostCommentToArticle article_id={this.props.article.article_id} />
         {comments.map(comment => {
           return (
             <SingleArticleCommentsCard
