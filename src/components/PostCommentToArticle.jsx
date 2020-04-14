@@ -4,7 +4,8 @@ import * as api from "../utils/api";
 class PostCommentToArticle extends Component {
   state = {
     user: "",
-    comment: ""
+    comment: "",
+    isLoading: true
   };
 
   handleChange = event => {
@@ -31,13 +32,15 @@ class PostCommentToArticle extends Component {
   };
 
   render() {
+    const { user, comment } = this.state;
+
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
           UserName:
           <input
             name="user"
-            value={this.state.user}
+            value={user}
             placeholder="enter"
             required
             onChange={this.handleChange}
@@ -47,7 +50,7 @@ class PostCommentToArticle extends Component {
           Comment:
           <input
             name="comment"
-            value={this.state.comment}
+            value={comment}
             placeholder="enter"
             required
             onChange={this.handleChange}
