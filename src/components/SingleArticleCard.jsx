@@ -15,7 +15,7 @@ const SingleArticleCard = props => {
   } = props.article;
 
   return (
-    <article className="single-article-card">
+    <article>
       <h2>{title}</h2>
       <h3>Author: {author}</h3>
       <p>{body}</p>
