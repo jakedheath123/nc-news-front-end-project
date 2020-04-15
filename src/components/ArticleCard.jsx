@@ -12,7 +12,7 @@ const ArticleCard = props => {
     votes
   } = props.article;
   return (
-    <li>
+    <li className="single-article">
       <h3 className="hvr-underline-from-center">
         <Link className="article-name-link" to={`/article/${article_id}`}>
           {title}
