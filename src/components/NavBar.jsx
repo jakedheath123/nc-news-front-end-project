@@ -15,18 +15,18 @@ export default class NavBar extends Component {
     return (
       <nav className="main-nav">
         <ul>
-          <Link className="link" to="/">
-            <li>Home</li>
-          </Link>
+          <li>
+            <Link className="link" to="/">
+              Home
+            </Link>
+          </li>
           {topics.map(topic => {
             return (
-              <Link
-                key={topic.slug}
-                className="link"
-                to={`/topics/${topic.slug}`}
-              >
-                <li>Topic: {topic.slug}</li>
-              </Link>
+              <li key={topic.slug}>
+                <Link className="link" to={`/topics/${topic.slug}`}>
+                  Topic: {topic.slug}
+                </Link>
+              </li>
             );
           })}
         </ul>
