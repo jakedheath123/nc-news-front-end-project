@@ -23,7 +23,10 @@ export default class SingleArticle extends Component {
         <SingleArticleCard article={article} />
         <br></br>
         <ViewToggler>
-          <SingleArticleComments article={article} />
+          <SingleArticleComments
+            fetchSingleArticle={this.fetchSingleArticle}
+            article={article}
+          />
         </ViewToggler>
       </main>
     );
