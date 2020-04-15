@@ -19,6 +19,7 @@ export default class SingleArticleComments extends Component {
     if (isLoading) return <Loader />;
     return (
       <section>
+        <br></br>
         <h2>Comments:</h2>
         <PostCommentToArticle
           article_id={this.props.article.article_id}
