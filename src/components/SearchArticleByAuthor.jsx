@@ -24,20 +24,23 @@ export default class SearchArticleByAuthor extends Component {
     const { input } = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Search By Author:
-          <input
-            type="text"
-            name="input"
-            value={input}
-            placeholder="Name"
-            onChange={this.handleChange}
-            required
-          />
-        </label>
-        <button>Submit</button>
-      </form>
+      <>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Search By Author:
+            <input
+              type="text"
+              name="input"
+              value={input}
+              placeholder="Name"
+              onChange={this.handleChange}
+              required
+            />
+          </label>
+          <button>Submit</button>
+        </form>
+        <button>Reset</button>
+      </>
     );
   }
 }
