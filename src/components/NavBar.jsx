@@ -40,7 +40,8 @@ export default class NavBar extends Component {
   fetchAllTopics = () => {
     api.getAllTopics().then(response => {
       this.setState({
-        topics: response
+        topics: response,
+        isLoading: false
       });
     });
   };
