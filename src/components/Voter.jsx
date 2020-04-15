@@ -17,7 +17,7 @@ class Voter extends Component {
     return (
       <section>
         <button onClick={() => this.handleClick(1)}>Like</button>
-        <h4>Votes: {this.props.votes}</h4>
+        <h4>Votes: {this.props.votes + this.state.optimisticVotes}</h4>
         <button onClick={() => this.handleClick(-1)}>Dislike</button>
       </section>
     );
