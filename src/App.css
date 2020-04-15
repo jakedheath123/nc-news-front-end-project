@@ -50,18 +50,17 @@ body {
   color: var(--light);
 }
 
-button {
+/* button {
   background: var(--primary);
   margin: 1rem;
   display: block;
   text-decoration: none;
-  padding: 0.5rem;
   text-align: center;
   color: var(--dark);
   text-transform: uppercase;
   font-size: 0.8rem;
   box-shadow: var(--shadow);
-}
+} */
 
 button:hover {
   background: var(--dark);
