@@ -14,6 +14,12 @@ export default class SingleArticleComments extends Component {
     this.fetchSingleArticleComments();
   }
 
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevState.comments.length !== this.state.comments.length) {
+  //     this.fetchSingleArticleComments();
+  //   }
+  // }
+
   render() {
     const { isLoading, comments } = this.state;
     if (isLoading) return <Loader />;
@@ -65,7 +71,8 @@ export default class SingleArticleComments extends Component {
           ...this.state.comments.filter(comment => {
             return comment.comment_id !== id;
           })
-        ]
+        ],
+        isLoading: false
       });
     });
   };
