@@ -29,6 +29,14 @@ body {
   border: 1px red solid;
 }
 
+.single-article {
+  border: 1px solid black;
+}
+
+.search-articles {
+  border: 1px solid black;
+}
+
 .article-name-link {
   color: red;
   text-decoration: none;
