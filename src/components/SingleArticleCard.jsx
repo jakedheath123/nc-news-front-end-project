@@ -22,11 +22,6 @@ const SingleArticleCard = props => {
       <h4>Votes: {votes}</h4>
       <h4>Comment Count: {comment_count}</h4>
       <h4>Published: {dateConverter(created_at)}</h4>
-      {/* <br></br>
-      <Link to="/">
-        <button>Back</button>
-      </Link>
-      <hr></hr> */}
     </article>
   );
 };
