@@ -5,7 +5,13 @@ class Voter extends Component {
     optimisticVotes: 0
   };
 
-  handleClick = () => {};
+  handleClick = inc_votes => {
+    this.setState(currentState => {
+      return {
+        optimisticVotes: currentState.optimisticVotes + inc_votes
+      };
+    });
+  };
 
   render() {
     return (
