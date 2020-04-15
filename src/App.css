@@ -130,23 +130,6 @@ ul {
   margin: 0%;
 }
 
-.single-topic p {
-  font-size: 20px;
-  font-style: italic;
-}
-
-.single-topic h2 {
-  text-align: center;
-}
-
-.single-topic h3 {
-  text-align: center;
-}
-
-.single-topic h4 {
-  text-align: center;
-}
-
 /*Loader Component*/
 .lds-ring {
   display: inline-block;
