@@ -16,9 +16,19 @@ class Voter extends Component {
   render() {
     return (
       <section>
-        <button onClick={() => this.handleClick(1)}>Like</button>
+        <button
+          onClick={() => this.handleClick(1)}
+          disabled={this.state.optimisticVotes > 0}
+        >
+          Like
+        </button>
         <h4>Votes: {this.props.votes + this.state.optimisticVotes}</h4>
-        <button onClick={() => this.handleClick(-1)}>Dislike</button>
+        <button
+          onClick={() => this.handleClick(-1)}
+          disabled={this.state.optimisticVotes < 0}
+        >
+          Dislike
+        </button>
       </section>
     );
   }
