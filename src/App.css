@@ -91,6 +91,10 @@ button:hover {
   /* border: 1px black solid; */
 }
 
+.articles li {
+  padding: 0% 5% 0% 0%;
+}
+
 /*Loader Component*/
 .lds-ring {
   display: inline-block;
