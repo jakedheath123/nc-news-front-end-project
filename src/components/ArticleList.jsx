@@ -40,18 +40,6 @@ class ArticleList extends Component {
               })}
             </ul>
           </section>
-          <div className="top-box top-box-a">
-            <img src={Image1} alt="news" />
-          </div>
-          <div className="top-box top-box-b">
-            <img src={Image2} alt="news" />
-          </div>
-          <div className="top-box top-box-c">
-            <img src={Image3} alt="news" />
-          </div>
-          <div className="top-box top-box-d">
-            <img src={Image4} alt="news" />
-          </div>
         </main>
       </>
     );
