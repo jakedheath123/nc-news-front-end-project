@@ -4,7 +4,8 @@ import * as api from "../utils/api";
 
 export default class NavBar extends Component {
   state = {
-    topics: []
+    topics: [],
+    isLoading: true
   };
   componentDidMount() {
     this.fetchAllTopics();
