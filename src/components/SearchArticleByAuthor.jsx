@@ -24,7 +24,7 @@ export default class SearchArticleByAuthor extends Component {
     const { input } = this.state;
 
     return (
-      <form className="search-articles" onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <label>
           Search By Author:
           <input
