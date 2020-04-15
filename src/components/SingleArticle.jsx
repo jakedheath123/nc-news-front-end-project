@@ -19,7 +19,7 @@ export default class SingleArticle extends Component {
     const { article, isLoading } = this.state;
     if (isLoading) return <Loader />;
     return (
-      <main>
+      <main className="single-article-card">
         <SingleArticleCard article={article} />
         <br></br>
         <ViewToggler>
