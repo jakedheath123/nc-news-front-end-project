@@ -1,7 +1,6 @@
 import React from "react";
 import { dateConverter } from "../utils/utils";
 import Voter from "./Voter";
-// import { Link } from "@reach/router";
 
 const SingleArticleCard = props => {
   const {
