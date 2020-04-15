@@ -25,6 +25,7 @@ body {
 .wrapper {
   display: grid;
   grid-gap: 1rem;
+  border: 1px red solid;
 }
 
 .article-name-link {
