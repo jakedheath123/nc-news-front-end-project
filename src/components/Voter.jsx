@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import * as api from "../utils/api";
 
 class Voter extends Component {
   state = {
@@ -11,6 +12,7 @@ class Voter extends Component {
         optimisticVotes: currentState.optimisticVotes + inc_votes
       };
     });
+    api.patchVotes(inc_votes, this.props.article_id);
   };
 
   render() {
