@@ -3,7 +3,7 @@ import { List } from "semantic-ui-react";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <List>
         <List.Item>
           <List.Icon name="users" />
