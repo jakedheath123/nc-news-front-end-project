@@ -12,7 +12,7 @@ const SingleArticleCommentsCard = props => {
       <Voter votes={votes} id={comment_id} type={"comments"} />
       <br></br>
       <button onClick={() => props.removeCommentFromList(comment_id)}>
-        DELETE COMMENT
+        DELETE Comment
       </button>
       <hr></hr>
     </div>
