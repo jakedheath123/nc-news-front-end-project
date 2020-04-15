@@ -10,7 +10,8 @@ const SingleArticleCard = props => {
     votes,
     topic,
     author,
-    comment_count
+    comment_count,
+    article_id
   } = props.article;
 
   return (
@@ -21,7 +22,7 @@ const SingleArticleCard = props => {
       <h4>Topic: {topic}</h4>
       <h4>Comment Count: {comment_count}</h4>
       <h4>Published: {dateConverter(created_at)}</h4>
-      <Voter votes={votes} />
+      <Voter votes={votes} article_id={article_id} />
     </article>
   );
 };
