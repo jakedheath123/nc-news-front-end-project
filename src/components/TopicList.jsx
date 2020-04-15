@@ -23,7 +23,7 @@ export default class TopicList extends Component {
     const { articles, isLoading } = this.state;
     if (isLoading) return <Loader />;
     return (
-      <ul>
+      <ul className="topic-list">
         {articles.map(article => {
           return <TopicCard key={article.article_id} article={article} />;
         })}
