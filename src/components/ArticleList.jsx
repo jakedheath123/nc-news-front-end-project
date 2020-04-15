@@ -24,9 +24,9 @@ class ArticleList extends Component {
         <SortArticlesBy
           sortArticlesBySelection={this.sortArticlesBySelection}
         />
+        <h2>Articles:</h2>
         <main className="home-container">
           <ul className="articles">
-            <h2>Articles:</h2>
             {articles.map(article => {
               return <ArticleCard key={article.article_id} article={article} />;
             })}
