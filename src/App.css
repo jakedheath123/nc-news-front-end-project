@@ -6,6 +6,10 @@
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
+ul {
+  padding: 0%;
+}
+
 html {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -105,6 +109,38 @@ img {
 
 .image-home {
   grid-area: image-home;
+}
+
+ul {
+  margin: 0%;
+}
+
+.single-topic {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+  line-height: 200%;
+  list-style: none;
+  margin: 0%;
+}
+
+.single-topic p {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.single-topic h2 {
+  text-align: center;
+}
+
+.single-topic h3 {
+  text-align: center;
+}
+
+.single-topic h4 {
+  text-align: center;
 }
 
 /*Loader Component*/
