@@ -33,6 +33,7 @@ class ArticleList extends Component {
             })}
           </ul>
         </section>
+        <div className="top-box top-box-a"></div>
       </main>
     );
   }
