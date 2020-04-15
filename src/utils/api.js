@@ -16,14 +16,6 @@ const getAllArticles = topic => {
     });
 };
 
-const sortAllArticles = selection => {
-  return request.get("/articles", {
-    params: {
-      sort_by: selection
-    }
-  });
-};
-
 const getAllTopics = () => {
   return request.get("/topics").then(({ data: { topics } }) => {
     return topics;
@@ -75,6 +67,5 @@ module.exports = {
   getSingleArticleComments,
   getAllTopics,
   postComment,
-  deleteArticleComment,
-  sortAllArticles
+  deleteArticleComment
 };
