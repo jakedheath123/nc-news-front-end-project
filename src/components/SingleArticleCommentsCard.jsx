@@ -9,7 +9,7 @@ const SingleArticleCommentsCard = props => {
       <p>{body}</p>
       <h4>Written By: {author}</h4>
       <h4>Posted: {dateConverter(created_at)}</h4>
-      <Voter />
+      <Voter votes={votes} id={comment_id} />
       <button onClick={() => props.removeCommentFromList(comment_id)}>
         DELETE COMMENT
       </button>
