@@ -29,8 +29,8 @@ class ArticleList extends Component {
         <SortArticlesBy
           sortArticlesBySelection={this.sortArticlesBySelection}
         />
-        <main className="top-container">
-          <section className="showcase">
+        <main>
+          <section>
             <ul>
               <h2>Articles:</h2>
               {articles.map(article => {
