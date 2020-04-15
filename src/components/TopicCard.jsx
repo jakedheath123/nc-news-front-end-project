@@ -14,9 +14,7 @@ const TopicCard = props => {
   return (
     <li className="single-topic">
       <h2 className="hvr-underline-from-center">
-        <Link className="article-name-link" to={`/article/${article_id}`}>
-          {title}
-        </Link>
+        <Link to={`/article/${article_id}`}>{title}</Link>
       </h2>
       <h3>Author : {author}</h3>
       <h4>Published : {dateConverter(created_at)}</h4>
