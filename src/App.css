@@ -231,8 +231,13 @@ ul {
   }
   header {
     text-align: center;
-    padding: 0% 20% 3% 5%;
+    padding: 0% 0% 3% 5%;
   }
+
+  .single-topic {
+    padding: 0%;
+  }
+
   .articles {
     padding: 0% 15% 3% 5%;
     grid-template-columns: repeat(1, 1fr);
