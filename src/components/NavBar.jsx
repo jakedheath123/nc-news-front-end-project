@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
 import * as api from "../utils/api";
+import Loader from "./Loader";
 
 export default class NavBar extends Component {
   state = {
@@ -12,7 +13,8 @@ export default class NavBar extends Component {
   }
 
   render() {
-    const { topics } = this.state;
+    const { topics, isLoading } = this.state;
+    if (isLoading) return <Loader />;
     return (
       <nav className="main-nav">
         <ul>
