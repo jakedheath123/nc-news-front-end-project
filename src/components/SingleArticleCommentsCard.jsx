@@ -1,5 +1,6 @@
 import React from "react";
 import { dateConverter } from "../utils/utils";
+import Voter from "./Voter";
 
 const SingleArticleCommentsCard = props => {
   const { author, body, comment_id, votes, created_at } = props.comment;
@@ -7,8 +8,8 @@ const SingleArticleCommentsCard = props => {
     <>
       <p>{body}</p>
       <h4>Written By: {author}</h4>
-      <h4>Votes: {votes}</h4>
       <h4>Posted: {dateConverter(created_at)}</h4>
+      <Voter />
       <button onClick={() => props.removeCommentFromList(comment_id)}>
         DELETE COMMENT
       </button>
