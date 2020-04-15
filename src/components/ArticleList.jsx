@@ -4,6 +4,7 @@ import * as api from "../utils/api";
 import SearchArticleByAuthor from "./SearchArticleByAuthor";
 import SortArticlesBy from "./SortArticlesBy";
 import Loader from "./Loader";
+import { Image1 } from "../images/image1.jpg";
 
 class ArticleList extends Component {
   state = {
@@ -33,7 +34,9 @@ class ArticleList extends Component {
             })}
           </ul>
         </section>
-        <div className="top-box top-box-a"></div>
+        <div className="top-box top-box-a">
+          <img src={Image1} alt="news" />
+        </div>
       </main>
     );
   }
