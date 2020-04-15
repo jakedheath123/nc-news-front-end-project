@@ -4,11 +4,12 @@ const request = axios.create({
   baseURL: "https://nc-news-be-project.herokuapp.com/api"
 });
 
-const getAllArticles = topic => {
+const getAllArticles = (topic, sort_by) => {
   return request
     .get("/articles", {
       params: {
-        topic
+        topic,
+        sort_by
       }
     })
     .then(({ data: { articles } }) => {
