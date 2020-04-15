@@ -19,18 +19,20 @@ class ArticleList extends Component {
     const { articles, isLoading } = this.state;
     if (isLoading) return <Loader />;
     return (
-      <main>
+      <>
         <SearchArticleByAuthor searchByAuthor={this.searchByAuthor} />
         <SortArticlesBy
           sortArticlesBySelection={this.sortArticlesBySelection}
         />
-        <ul>
-          <h2>Articles:</h2>
-          {articles.map(article => {
-            return <ArticleCard key={article.article_id} article={article} />;
-          })}
-        </ul>
-      </main>
+        <main className="home-container">
+          <ul>
+            <h2>Articles:</h2>
+            {articles.map(article => {
+              return <ArticleCard key={article.article_id} article={article} />;
+            })}
+          </ul>
+        </main>
+      </>
     );
   }
 
