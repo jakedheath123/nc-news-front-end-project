@@ -2,7 +2,13 @@ import React, { Component } from "react";
 
 class Voter extends Component {
   render() {
-    return <div></div>;
+    return (
+      <section>
+        <button>Like</button>
+        <h4>Votes: {this.props.votes}</h4>
+        <button>Dislike</button>
+      </section>
+    );
   }
 }
 
