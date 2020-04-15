@@ -16,6 +16,11 @@ html {
   color: var(--dark);
 }
 
+.header {
+  border: 1px black solid;
+  text-align: center;
+}
+
 body {
   background: #ccc;
   margin: 30px 50px;
