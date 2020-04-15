@@ -25,6 +25,7 @@ class ArticleList extends Component {
     return (
       <>
         <SearchArticleByAuthor searchByAuthor={this.searchByAuthor} />
+        <br></br>
         <SortArticlesBy
           sortArticlesBySelection={this.sortArticlesBySelection}
         />
