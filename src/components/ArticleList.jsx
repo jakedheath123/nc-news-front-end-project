@@ -5,6 +5,9 @@ import SearchArticleByAuthor from "./SearchArticleByAuthor";
 import SortArticlesBy from "./SortArticlesBy";
 import Loader from "./Loader";
 import { Image1 } from "../images/image1.jpg";
+import { Image2 } from "../images/image2.jpg";
+import { Image3 } from "../images/image3.jpg";
+import { Image4 } from "../images/image4.jpg";
 
 class ArticleList extends Component {
   state = {
@@ -36,6 +39,15 @@ class ArticleList extends Component {
         </section>
         <div className="top-box top-box-a">
           <img src={Image1} alt="news" />
+        </div>
+        <div className="top-box top-box-b">
+          <img src={Image2} alt="news" />
+        </div>
+        <div className="top-box top-box-c">
+          <img src={Image3} alt="news" />
+        </div>
+        <div className="top-box top-box-d">
+          <img src={Image4} alt="news" />
         </div>
       </main>
     );
