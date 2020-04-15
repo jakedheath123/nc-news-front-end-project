@@ -8,8 +8,7 @@ import Loader from "./Loader";
 class ArticleList extends Component {
   state = {
     articles: [],
-    isLoading: true,
-    selection: ""
+    isLoading: true
   };
 
   componentDidMount() {
@@ -54,16 +53,12 @@ class ArticleList extends Component {
   };
 
   sortArticlesBySelection = selection => {
-    this.setState({
-      selection
+    api.getAllArticles(selection).then(response => {
+      this.setState({
+        articles: response,
+        isLoading: false
+      });
     });
-    api.getAllArticles(this.state.selection);
-    // api.getAllArticles(selection).then(response => {
-    //   this.setState({
-    //     articles: response,
-    //     isLoading: false
-    //   });
-    // });
   };
 }
 
