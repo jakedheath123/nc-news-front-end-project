@@ -34,7 +34,6 @@ body {
   list-style: none;
   padding: 0% 0% 2% 0%;
   grid-template-columns: repeat(4, 1fr);
-  /* border: 1px solid black; */
 }
 
 .link {
