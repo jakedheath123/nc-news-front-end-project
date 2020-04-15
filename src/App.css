@@ -33,6 +33,10 @@ body {
   border: 1px solid black;
 }
 
+.sort-by {
+  border: 1px black solid;
+}
+
 .search-articles {
   border: 1px solid black;
 }
