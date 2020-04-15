@@ -4,10 +4,6 @@ import * as api from "../utils/api";
 import SearchArticleByAuthor from "./SearchArticleByAuthor";
 import SortArticlesBy from "./SortArticlesBy";
 import Loader from "./Loader";
-import { Image1 } from "../images/image1.jpg";
-import { Image2 } from "../images/image2.jpg";
-import { Image3 } from "../images/image3.jpg";
-import { Image4 } from "../images/image4.jpg";
 
 class ArticleList extends Component {
   state = {
