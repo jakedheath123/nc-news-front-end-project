@@ -61,9 +61,9 @@ const deleteArticleComment = comment_id => {
   });
 };
 
-const patchVotes = (inc_votes, article_id) => {
+const patchVotes = (inc_votes, article_id, type) => {
   return request
-    .patch(`/articles/${article_id}`, {
+    .patch(`/${type}/${article_id}`, {
       inc_votes
     })
     .then(({ data }) => {
