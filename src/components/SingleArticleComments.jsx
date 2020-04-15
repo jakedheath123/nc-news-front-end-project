@@ -71,14 +71,19 @@ export default class SingleArticleComments extends Component {
 
   removeCommentFromList = id => {
     api.deleteArticleComment(id).then(response => {
-      this.setState({
-        comments: [
-          ...this.state.comments.filter(comment => {
-            return comment.comment_id !== id;
-          })
-        ],
-        isLoading: false
-      });
+      this.setState(
+        {
+          comments: [
+            ...this.state.comments.filter(comment => {
+              return comment.comment_id !== id;
+            })
+          ],
+          isLoading: false
+        },
+        () => {
+          this.props.fetchSingleArticle();
+        }
+      );
     });
   };
 }
