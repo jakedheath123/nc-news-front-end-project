@@ -76,8 +76,8 @@ button:hover {
   display: grid;
   grid-gap: 20px;
   grid-template-areas:
-    "articles articles"
-    "articles articles";
+    "articles articles image-home"
+    "articles articles image-home";
 }
 
 .articles {
@@ -93,6 +93,14 @@ button:hover {
 
 .articles li {
   padding: 0% 5% 0% 0%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.image-home {
+  grid-area: image-home;
 }
 
 /*Loader Component*/
