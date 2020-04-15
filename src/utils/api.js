@@ -61,6 +61,16 @@ const deleteArticleComment = comment_id => {
   });
 };
 
+const patchVotes = (inc_votes, article_id) => {
+  return request
+    .patch(`/articles/${article_id}`, {
+      inc_votes
+    })
+    .then(({ data }) => {
+      return data;
+    });
+};
+
 module.exports = {
   getAllArticles,
   getArticleByAuthor,
@@ -68,5 +78,6 @@ module.exports = {
   getSingleArticleComments,
   getAllTopics,
   postComment,
-  deleteArticleComment
+  deleteArticleComment,
+  patchVotes
 };
