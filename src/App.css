@@ -40,6 +40,10 @@ ul {
   text-decoration: none;
 }
 
+.article-list {
+  border: 1px solid black;
+}
+
 /*Navigation*/
 .main-nav ul {
   display: grid;
