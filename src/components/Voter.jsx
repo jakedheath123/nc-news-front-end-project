@@ -12,7 +12,7 @@ class Voter extends Component {
         optimisticVotes: currentState.optimisticVotes + inc_votes
       };
     });
-    api.patchVotes(inc_votes, this.props.article_id, "articles");
+    api.patchVotes(inc_votes, this.props.id, "articles");
   };
 
   render() {
