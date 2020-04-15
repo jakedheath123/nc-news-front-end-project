@@ -24,32 +24,36 @@ class ArticleList extends Component {
     const { articles, isLoading } = this.state;
     if (isLoading) return <Loader />;
     return (
-      <main className="top-container">
-        <section className="showcase">
-          <SearchArticleByAuthor searchByAuthor={this.searchByAuthor} />
-          <SortArticlesBy
-            sortArticlesBySelection={this.sortArticlesBySelection}
-          />
-          <ul>
-            <h2>Articles:</h2>
-            {articles.map(article => {
-              return <ArticleCard key={article.article_id} article={article} />;
-            })}
-          </ul>
-        </section>
-        <div className="top-box top-box-a">
-          <img src={Image1} alt="news" />
-        </div>
-        <div className="top-box top-box-b">
-          <img src={Image2} alt="news" />
-        </div>
-        <div className="top-box top-box-c">
-          <img src={Image3} alt="news" />
-        </div>
-        <div className="top-box top-box-d">
-          <img src={Image4} alt="news" />
-        </div>
-      </main>
+      <>
+        <SearchArticleByAuthor searchByAuthor={this.searchByAuthor} />
+        <SortArticlesBy
+          sortArticlesBySelection={this.sortArticlesBySelection}
+        />
+        <main className="top-container">
+          <section className="showcase">
+            <ul>
+              <h2>Articles:</h2>
+              {articles.map(article => {
+                return (
+                  <ArticleCard key={article.article_id} article={article} />
+                );
+              })}
+            </ul>
+          </section>
+          <div className="top-box top-box-a">
+            <img src={Image1} alt="news" />
+          </div>
+          <div className="top-box top-box-b">
+            <img src={Image2} alt="news" />
+          </div>
+          <div className="top-box top-box-c">
+            <img src={Image3} alt="news" />
+          </div>
+          <div className="top-box top-box-d">
+            <img src={Image4} alt="news" />
+          </div>
+        </main>
+      </>
     );
   }
 
