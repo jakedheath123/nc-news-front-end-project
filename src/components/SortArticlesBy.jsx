@@ -16,7 +16,7 @@ class SortArticlesBy extends Component {
   render() {
     return (
       <>
-        <form>
+        <form className="sort-by">
           <label>
             Sort By:
             <select onChange={this.handleChange} value={this.state.selection}>
