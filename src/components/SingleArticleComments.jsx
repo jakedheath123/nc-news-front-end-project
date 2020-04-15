@@ -45,12 +45,17 @@ export default class SingleArticleComments extends Component {
   }
 
   addCommentToList = comment => {
-    this.setState(currentState => {
-      return {
-        comments: [comment, ...currentState.comments],
-        isLoading: false
-      };
-    });
+    this.setState(
+      currentState => {
+        return {
+          comments: [comment, ...currentState.comments],
+          isLoading: false
+        };
+      },
+      () => {
+        this.props.fetchSingleArticle();
+      }
+    );
   };
 
   fetchSingleArticleComments = () => {
