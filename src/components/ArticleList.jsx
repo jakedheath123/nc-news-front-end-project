@@ -20,7 +20,7 @@ class ArticleList extends Component {
     const { articles, isLoading } = this.state;
     if (isLoading) return <Loader />;
     return (
-      <>
+      <main className="article-list">
         <SearchArticleByAuthor searchByAuthor={this.searchByAuthor} />
         <SortArticlesBy
           sortArticlesBySelection={this.sortArticlesBySelection}
@@ -31,7 +31,7 @@ class ArticleList extends Component {
             return <ArticleCard key={article.article_id} article={article} />;
           })}
         </ul>
-      </>
+      </main>
     );
   }
 
