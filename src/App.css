@@ -296,4 +296,22 @@ ul {
   .search-form button {
     margin: 1%;
   }
+
+  .post-comment-form {
+    margin: 5%;
+  }
+
+  .post-comment-form button {
+    margin: 5%;
+  }
+
+  p {
+    line-height: 2;
+    font-size: 1.5rem;
+  }
+
+  .single-article-card {
+    text-align: center;
+    padding: 0%;
+  }
 }
