@@ -220,6 +220,10 @@ ul {
     padding: 0%;
   }
 
+  h2 {
+    padding: 5%;
+  }
+
   .articles {
     padding: 0% 2% 0% 2%;
     grid-template-columns: repeat(1, 1fr);
