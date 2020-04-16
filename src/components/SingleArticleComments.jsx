@@ -22,7 +22,7 @@ export default class SingleArticleComments extends Component {
         <br></br>
         <h2>Comments:</h2>
         <PostCommentToArticle
-          article_id={this.props.article.article_id}
+          article_id={this.props.id}
           addCommentToList={this.addCommentToList}
         />
         <hr></hr>
@@ -54,14 +54,12 @@ export default class SingleArticleComments extends Component {
   };
 
   fetchSingleArticleComments = () => {
-    api
-      .getSingleArticleComments(this.props.article.article_id)
-      .then(response => {
-        this.setState({
-          comments: response,
-          isLoading: false
-        });
+    api.getSingleArticleComments(this.props.id).then(response => {
+      this.setState({
+        comments: response,
+        isLoading: false
       });
+    });
   };
 
   removeCommentFromList = id => {
