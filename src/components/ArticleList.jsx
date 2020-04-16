@@ -24,11 +24,13 @@ class ArticleList extends Component {
     if (isLoading) return <Loader />;
     return (
       <>
-        <SearchArticleByAuthor searchByAuthor={this.searchByAuthor} />
+        <SearchArticleByAuthor
+          searchByAuthor={this.searchByAuthor}
+          resetAuthors={this.resetAuthors}
+        />
         <br></br>
         <SortArticlesBy
           sortArticlesBySelection={this.sortArticlesBySelection}
-          resetAuthors={this.resetAuthors}
         />
         <h2>Articles:</h2>
         <main className="home-container">
