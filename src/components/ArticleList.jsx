@@ -28,6 +28,7 @@ class ArticleList extends Component {
         <br></br>
         <SortArticlesBy
           sortArticlesBySelection={this.sortArticlesBySelection}
+          resetAuthors={this.resetAuthors}
         />
         <h2>Articles:</h2>
         <main className="home-container">
@@ -72,6 +73,10 @@ class ArticleList extends Component {
         isLoading: false
       });
     });
+  };
+
+  resetAuthors = () => {
+    console.log("clicked");
   };
 }
 
