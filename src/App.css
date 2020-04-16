@@ -266,3 +266,7 @@ ul {
     box-shadow: var(--shadow);
   }
 }
+
+/*Tablet*/
+@media (min-width: 501px) and (max-width: 768px) {
+}
