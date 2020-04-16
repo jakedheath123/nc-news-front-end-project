@@ -45,6 +45,7 @@ class PostCommentToArticle extends Component {
             onChange={this.handleChange}
           />
         </label>
+        <br></br>
         <label>
           Comment:
           <input
