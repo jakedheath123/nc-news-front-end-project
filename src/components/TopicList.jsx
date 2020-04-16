@@ -6,7 +6,8 @@ import Loader from "./Loader";
 export default class TopicList extends Component {
   state = {
     articles: [],
-    isLoading: true
+    isLoading: true,
+    topicError: null
   };
 
   componentDidMount() {
