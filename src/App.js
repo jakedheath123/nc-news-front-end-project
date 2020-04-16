@@ -13,16 +13,14 @@ export default class App extends Component {
     username: "jessjelly"
   };
   render() {
+    const { username } = this.state;
     return (
       <div className="wrapper">
-        <Header username={this.state.username} />
+        <Header username={username} />
         <NavBar />
         <Router>
           <ArticleList path="/" />
-          <SingleArticle
-            path="/article/:article_id"
-            username={this.state.username}
-          />
+          <SingleArticle path="/article/:article_id" username={username} />
           <TopicList path="/topics/:slug" />
         </Router>
         <Footer />
