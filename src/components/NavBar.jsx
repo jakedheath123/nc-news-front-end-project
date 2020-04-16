@@ -1,20 +1,18 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
 import * as api from "../utils/api";
-import Loader from "./Loader";
 
 export default class NavBar extends Component {
   state = {
-    topics: [],
-    isLoading: true
+    topics: []
   };
   componentDidMount() {
     this.fetchAllTopics();
   }
 
   render() {
-    const { topics, isLoading } = this.state;
-    if (isLoading) return <Loader />;
+    const { topics } = this.state;
+
     return (
       <nav className="main-nav">
         <ul>
