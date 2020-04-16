@@ -189,13 +189,22 @@ ul {
 /*Media Queries(500px)*/
 @media (max-width: 500px) {
   .home-container {
-    grid-template-areas:
-      "image-home"
-      "articles ";
+    grid-template-areas: "articles ";
     text-align: center;
     justify-content: center;
   }
   .articles-header {
+    text-align: center;
+  }
+  body {
+    background: #ccc;
+    margin: 30px 10px;
+    line-height: 1.5;
+  }
+
+  h2 {
+    padding: 0%;
+    margin: 0%;
     text-align: center;
   }
   .main-nav ul {
