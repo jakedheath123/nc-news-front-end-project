@@ -11,9 +11,11 @@ const SingleArticleCommentsCard = props => {
       <h4>Posted: {dateConverter(created_at)}</h4>
       <Voter votes={votes} id={comment_id} type={"comments"} />
       <br></br>
-      <button onClick={() => props.removeCommentFromList(comment_id)}>
-        DELETE Comment
-      </button>
+      {author === props.username ? (
+        <button onClick={() => props.removeCommentFromList(comment_id)}>
+          DELETE Comment
+        </button>
+      ) : null}
       <hr></hr>
     </div>
   );
