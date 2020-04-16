@@ -26,6 +26,7 @@ export default class SingleArticle extends Component {
           <SingleArticleComments
             fetchSingleArticle={this.fetchSingleArticle}
             id={this.props.article_id}
+            username={this.props.username}
           />
         </ViewToggler>
       </main>
