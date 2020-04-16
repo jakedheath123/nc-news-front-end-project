@@ -221,7 +221,7 @@ ul {
   }
 
   .articles {
-    padding: 0% 15% 3% 5%;
+    padding: 0% 2% 0% 2%;
     grid-template-columns: repeat(1, 1fr);
   }
   .image-home {
