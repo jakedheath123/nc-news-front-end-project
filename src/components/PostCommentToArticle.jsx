@@ -34,7 +34,7 @@ class PostCommentToArticle extends Component {
     const { user, comment } = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="post-comment-form" onSubmit={this.handleSubmit}>
         <label>
           UserName:
           <input
