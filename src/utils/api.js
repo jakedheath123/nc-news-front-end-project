@@ -1,10 +1,10 @@
-const axios = require("axios");
+import axios from "axios";
 
 const request = axios.create({
   baseURL: "https://nc-news-be-project.herokuapp.com/api"
 });
 
-const getAllArticles = topic => {
+export const getAllArticles = topic => {
   return request
     .get("/articles", {
       params: {
@@ -16,7 +16,7 @@ const getAllArticles = topic => {
     });
 };
 
-const sortArticles = sort_by => {
+export const sortArticles = sort_by => {
   return request
     .get("/articles", {
       params: {
@@ -28,13 +28,13 @@ const sortArticles = sort_by => {
     });
 };
 
-const getAllTopics = () => {
+export const getAllTopics = () => {
   return request.get("/topics").then(({ data: { topics } }) => {
     return topics;
   });
 };
 
-const getArticlesByAuthor = author => {
+export const getArticlesByAuthor = author => {
   return request
     .get(`/articles?author=${author}`)
     .then(({ data: { articles } }) => {
@@ -42,7 +42,7 @@ const getArticlesByAuthor = author => {
     });
 };
 
-const getSingleArticle = article_id => {
+export const getSingleArticle = article_id => {
   return request
     .get(`/articles/${article_id}`)
     .then(({ data: { article } }) => {
@@ -50,7 +50,7 @@ const getSingleArticle = article_id => {
     });
 };
 
-const getSingleArticleComments = article_id => {
+export const getSingleArticleComments = article_id => {
   return request
     .get(`/articles/${article_id}/comments`)
     .then(({ data: { comments } }) => {
@@ -58,7 +58,7 @@ const getSingleArticleComments = article_id => {
     });
 };
 
-const postComment = (article_id, comment) => {
+export const postComment = (article_id, comment) => {
   return request
     .post(`/articles/${article_id}/comments`, comment)
     .then(({ data: { comment } }) => {
@@ -66,13 +66,13 @@ const postComment = (article_id, comment) => {
     });
 };
 
-const deleteArticleComment = comment_id => {
+export const deleteArticleComment = comment_id => {
   return request.delete(`/comments/${comment_id}`).then(response => {
     return response;
   });
 };
 
-const patchVotes = (inc_votes, id, type) => {
+export const patchVotes = (inc_votes, id, type) => {
   return request
     .patch(`/${type}/${id}`, {
       inc_votes
@@ -80,16 +80,4 @@ const patchVotes = (inc_votes, id, type) => {
     .then(({ data }) => {
       return data;
     });
-};
-
-module.exports = {
-  getAllArticles,
-  getArticlesByAuthor,
-  getSingleArticle,
-  getSingleArticleComments,
-  getAllTopics,
-  postComment,
-  deleteArticleComment,
-  patchVotes,
-  sortArticles
 };
