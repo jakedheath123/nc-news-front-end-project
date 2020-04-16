@@ -53,7 +53,7 @@ class ArticleList extends Component {
 
   searchByAuthor = author => {
     api
-      .getArticleByAuthor(author)
+      .getArticlesByAuthor(author)
       .then(response => {
         this.setState({
           articles: response,
