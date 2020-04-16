@@ -10,6 +10,10 @@ ul {
   padding: 0%;
 }
 
+.search-form button {
+  margin: 1%;
+}
+
 html {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
