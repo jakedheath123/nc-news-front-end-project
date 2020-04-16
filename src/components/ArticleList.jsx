@@ -32,7 +32,7 @@ class ArticleList extends Component {
         <SortArticlesBy
           sortArticlesBySelection={this.sortArticlesBySelection}
         />
-        <h2 className="articles-header">Articles:</h2>
+        <h2>Articles:</h2>
         <main className="home-container">
           <ul className="articles">
             {articles.map(article => {
