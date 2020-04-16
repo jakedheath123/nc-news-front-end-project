@@ -186,7 +186,7 @@ ul {
   right: 0;
 }
 
-/*Media Queries(500px)*/
+/*Smartphones*/
 @media (max-width: 500px) {
   .home-container {
     grid-template-areas: "articles ";
