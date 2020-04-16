@@ -202,6 +202,10 @@ ul {
     margin: 10%;
   }
 
+  p {
+    line-height: 2.5;
+  }
+
   body {
     background: #ccc;
     margin: 30px 10px;
