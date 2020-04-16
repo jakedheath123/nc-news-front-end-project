@@ -68,6 +68,10 @@ button:hover {
   color: #2098d1;
 }
 
+button {
+  box-shadow: var(--shadow);
+}
+
 .home-container {
   display: grid;
   grid-gap: 20px;
@@ -261,8 +265,7 @@ ul {
     padding: 1rem;
   }
   button {
-    background: var(--primary);
-
+    background: var(--light);
     text-decoration: none;
     text-align: center;
     color: var(--dark);
