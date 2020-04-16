@@ -15,7 +15,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        <Header />
+        <Header username={this.state.username} />
         <NavBar />
         <Router>
           <ArticleList path="/" />
