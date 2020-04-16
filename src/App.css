@@ -25,6 +25,7 @@ body {
 .wrapper {
   display: grid;
   grid-gap: 1rem;
+  text-align: center;
 }
 
 /*Navigation*/
