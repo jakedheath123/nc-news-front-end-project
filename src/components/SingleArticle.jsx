@@ -45,6 +45,13 @@ export default class SingleArticle extends Component {
       })
       .catch(error => {
         console.dir(error);
+        const { status, msg } = error.response.data;
+        this.setState({
+          articleError: {
+            status,
+            msg
+          }
+        });
       });
   };
 }
