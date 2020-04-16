@@ -4,11 +4,22 @@ const request = axios.create({
   baseURL: "https://nc-news-be-project.herokuapp.com/api"
 });
 
-const getAllArticles = (topic, sort_by) => {
+const getAllArticles = topic => {
   return request
     .get("/articles", {
       params: {
-        topic,
+        topic
+      }
+    })
+    .then(({ data: { articles } }) => {
+      return articles;
+    });
+};
+
+const sortArticles = sort_by => {
+  return request
+    .get("/articles", {
+      params: {
         sort_by
       }
     })
@@ -79,5 +90,6 @@ module.exports = {
   getAllTopics,
   postComment,
   deleteArticleComment,
-  patchVotes
+  patchVotes,
+  sortArticles
 };
