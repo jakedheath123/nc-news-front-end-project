@@ -37,9 +37,12 @@ export default class SearchArticleByAuthor extends Component {
               required
             />
           </label>
+          <br></br>
           <button>Submit</button>
+          <button type="reset" onClick={() => this.props.resetAuthors()}>
+            Reset
+          </button>
         </form>
-        <button onClick={() => this.props.resetAuthors()}>Reset</button>
       </>
     );
   }
