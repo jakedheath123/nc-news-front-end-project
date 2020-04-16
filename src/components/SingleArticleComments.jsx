@@ -24,6 +24,7 @@ export default class SingleArticleComments extends Component {
         <PostCommentToArticle
           article_id={this.props.id}
           addCommentToList={this.addCommentToList}
+          username={this.props.username}
         />
         <hr></hr>
         {comments.map(comment => {
