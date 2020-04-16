@@ -23,7 +23,7 @@ export default class App extends Component {
           <ArticleList path="/" />
           <SingleArticle path="/article/:article_id" username={username} />
           <TopicList path="/topics/:slug" />
-          <ErrorDisplay default />
+          <ErrorDisplay default status={404} msg={"Page not found"} />
         </Router>
         <Footer />
       </div>
