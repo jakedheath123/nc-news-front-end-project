@@ -24,7 +24,8 @@ export default class TopicList extends Component {
   render() {
     const { articles, isLoading, topicError } = this.state;
     if (isLoading) return <Loader />;
-    if (topicError) return <ErrorDisplay />;
+    if (topicError)
+      return <ErrorDisplay status={topicError.status} msg={topicError.msg} />;
     return (
       <ul>
         {articles.map(article => {
