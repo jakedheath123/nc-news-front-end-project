@@ -33,11 +33,24 @@ export default class TopicList extends Component {
   }
 
   fetchAllArticlesByTopic = () => {
-    api.getAllArticles(this.props.slug).then(response => {
-      this.setState({
-        articles: response,
-        isLoading: false
+    api
+      .getAllArticles(this.props.slug)
+      .then(response => {
+        this.setState({
+          articles: response,
+          isLoading: false
+        });
+      })
+      .catch(error => {
+        const { msg } = error.response.data;
+        const { status } = error.response;
+        this.setState({
+          topicError: {
+            status,
+            msg
+          },
+          isLoading: false
+        });
       });
-    });
   };
 }
