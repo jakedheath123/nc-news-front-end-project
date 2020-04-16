@@ -4,6 +4,7 @@ import SingleArticleCard from "./SingleArticleCard";
 import SingleArticleComments from "./SingleArticleComments";
 import ViewToggler from "./ViewToggler";
 import Loader from "./Loader";
+import ErrorDisplay from "./ErrorDisplay";
 
 export default class SingleArticle extends Component {
   state = {
@@ -17,8 +18,9 @@ export default class SingleArticle extends Component {
   }
 
   render() {
-    const { article, isLoading } = this.state;
+    const { article, isLoading, articleError } = this.state;
     if (isLoading) return <Loader />;
+    if (articleError) return <ErrorDisplay />;
     return (
       <main className="single-article-card">
         <SingleArticleCard article={article} />
