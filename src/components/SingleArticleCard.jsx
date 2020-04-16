@@ -1,6 +1,7 @@
 import React from "react";
 import { dateConverter } from "../utils/utils";
 import Voter from "./Voter";
+import { Link } from "@reach/router";
 
 const SingleArticleCard = props => {
   const {
@@ -16,6 +17,9 @@ const SingleArticleCard = props => {
 
   return (
     <article>
+      <Link to="/">
+        <button>Back</button>
+      </Link>
       <h2>{title}</h2>
       <h3>Author: {author}</h3>
       <p>{body}</p>
