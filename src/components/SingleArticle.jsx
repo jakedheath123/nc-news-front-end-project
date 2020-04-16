@@ -8,7 +8,8 @@ import Loader from "./Loader";
 export default class SingleArticle extends Component {
   state = {
     article: {},
-    isLoading: true
+    isLoading: true,
+    error: null
   };
 
   componentDidMount() {
