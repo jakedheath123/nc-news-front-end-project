@@ -78,7 +78,7 @@ class ArticleList extends Component {
   };
 
   resetAuthors = () => {
-    console.log("clicked");
+    this.fetchAllArticles();
   };
 }
 
