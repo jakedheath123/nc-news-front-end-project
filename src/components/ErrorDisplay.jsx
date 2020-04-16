@@ -1,7 +1,7 @@
 import React from "react";
 
 const ErrorDisplay = () => {
-  return <div></div>;
+  return <div>NOT HERE</div>;
 };
 
 export default ErrorDisplay;
