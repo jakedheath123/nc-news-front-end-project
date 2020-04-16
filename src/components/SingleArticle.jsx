@@ -34,11 +34,16 @@ export default class SingleArticle extends Component {
   }
 
   fetchSingleArticle = () => {
-    api.getSingleArticle(this.props.article_id).then(response => {
-      this.setState({
-        article: response,
-        isLoading: false
+    api
+      .getSingleArticle(this.props.article_id)
+      .then(response => {
+        this.setState({
+          article: response,
+          isLoading: false
+        });
+      })
+      .catch(error => {
+        console.dir(error);
       });
-    });
   };
 }
