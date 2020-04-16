@@ -24,7 +24,8 @@ class ArticleList extends Component {
   render() {
     const { articles, isLoading, searchError } = this.state;
     if (isLoading) return <Loader />;
-    if (searchError) return <ErrorDisplay />;
+    if (searchError)
+      return <ErrorDisplay status={searchError.status} msg={searchError.msg} />;
     return (
       <>
         <SearchArticleByAuthor
