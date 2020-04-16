@@ -7,6 +7,7 @@ import ArticleList from "./components/ArticleList";
 import SingleArticle from "./components/SingleArticle";
 import TopicList from "./components/TopicList";
 import Footer from "./components/Footer";
+import ErrorDisplay from "./components/ErrorDisplay";
 
 export default class App extends Component {
   state = {
@@ -22,6 +23,7 @@ export default class App extends Component {
           <ArticleList path="/" />
           <SingleArticle path="/article/:article_id" username={username} />
           <TopicList path="/topics/:slug" />
+          <ErrorDisplay default />
         </Router>
         <Footer />
       </div>
