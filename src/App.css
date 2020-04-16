@@ -292,4 +292,8 @@ ul {
   button {
     background-color: var(--light);
   }
+
+  .search-form button {
+    margin: 1%;
+  }
 }
