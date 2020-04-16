@@ -4,6 +4,7 @@ import * as api from "../utils/api";
 import SearchArticleByAuthor from "./SearchArticleByAuthor";
 import SortArticlesBy from "./SortArticlesBy";
 import Loader from "./Loader";
+import ErrorDisplay from "./ErrorDisplay";
 import Image1 from "../images/image1.jpg";
 import Image2 from "../images/image2.jpg";
 import Image3 from "../images/image3.jpg";
@@ -21,8 +22,9 @@ class ArticleList extends Component {
   }
 
   render() {
-    const { articles, isLoading } = this.state;
+    const { articles, isLoading, searchError } = this.state;
     if (isLoading) return <Loader />;
+    if (searchError) return <ErrorDisplay />;
     return (
       <>
         <SearchArticleByAuthor
