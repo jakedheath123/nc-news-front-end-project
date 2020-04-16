@@ -25,7 +25,7 @@ export default class SearchArticleByAuthor extends Component {
 
     return (
       <>
-        <form onSubmit={this.handleSubmit}>
+        <form className="search-form" onSubmit={this.handleSubmit}>
           <label>
             Search By Author:
             <input
