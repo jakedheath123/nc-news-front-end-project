@@ -9,6 +9,9 @@ import TopicList from "./components/TopicList";
 import Footer from "./components/Footer";
 
 export default class App extends Component {
+  state = {
+    username: "jessjelly"
+  };
   render() {
     return (
       <div className="wrapper">
