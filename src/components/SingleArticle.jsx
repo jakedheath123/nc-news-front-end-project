@@ -20,7 +20,10 @@ export default class SingleArticle extends Component {
   render() {
     const { article, isLoading, articleError } = this.state;
     if (isLoading) return <Loader />;
-    if (articleError) return <ErrorDisplay />;
+    if (articleError)
+      return (
+        <ErrorDisplay status={articleError.status} msg={articleError.msg} />
+      );
     return (
       <main className="single-article-card">
         <SingleArticleCard article={article} />
