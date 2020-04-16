@@ -50,7 +50,8 @@ export default class SingleArticle extends Component {
           articleError: {
             status,
             msg
-          }
+          },
+          isLoading: false
         });
       });
   };
