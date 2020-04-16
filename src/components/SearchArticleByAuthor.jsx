@@ -39,7 +39,7 @@ export default class SearchArticleByAuthor extends Component {
           </label>
           <button>Submit</button>
         </form>
-        <button>Reset</button>
+        <button onClick={() => this.props.resetAuthors()}>Reset</button>
       </>
     );
   }
