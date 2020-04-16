@@ -19,7 +19,10 @@ export default class App extends Component {
         <NavBar />
         <Router>
           <ArticleList path="/" />
-          <SingleArticle path="/article/:article_id" />
+          <SingleArticle
+            path="/article/:article_id"
+            username={this.state.username}
+          />
           <TopicList path="/topics/:slug" />
         </Router>
         <Footer />
