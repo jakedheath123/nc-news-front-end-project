@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as api from "../utils/api";
 import TopicCard from "./TopicCard";
 import Loader from "./Loader";
+import ErrorDisplay from "./ErrorDisplay";
 
 export default class TopicList extends Component {
   state = {
@@ -21,8 +22,9 @@ export default class TopicList extends Component {
   }
 
   render() {
-    const { articles, isLoading } = this.state;
+    const { articles, isLoading, topicError } = this.state;
     if (isLoading) return <Loader />;
+    if (topicError) return <ErrorDisplay />;
     return (
       <ul>
         {articles.map(article => {
