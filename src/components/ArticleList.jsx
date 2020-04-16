@@ -76,7 +76,7 @@ class ArticleList extends Component {
   };
 
   sortArticlesBySelection = selection => {
-    api.getAllArticles(selection).then(response => {
+    api.sortArticles(selection).then(response => {
       this.setState({
         articles: response,
         isLoading: false
