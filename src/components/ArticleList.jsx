@@ -12,7 +12,8 @@ import Image4 from "../images/image4.jpg";
 class ArticleList extends Component {
   state = {
     articles: [],
-    isLoading: true
+    isLoading: true,
+    error: null
   };
 
   componentDidMount() {
