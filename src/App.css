@@ -202,6 +202,10 @@ ul {
     line-height: 1.5;
   }
 
+  select {
+    background-color: var(--light);
+  }
+
   ul {
     margin: 10%;
   }
