@@ -23,7 +23,7 @@ const getAllTopics = () => {
   });
 };
 
-const getArticleByAuthor = author => {
+const getArticlesByAuthor = author => {
   return request
     .get(`/articles?author=${author}`)
     .then(({ data: { articles } }) => {
@@ -73,7 +73,7 @@ const patchVotes = (inc_votes, id, type) => {
 
 module.exports = {
   getAllArticles,
-  getArticleByAuthor,
+  getArticlesByAuthor,
   getSingleArticle,
   getSingleArticleComments,
   getAllTopics,
