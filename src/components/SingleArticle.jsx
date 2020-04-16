@@ -9,7 +9,7 @@ export default class SingleArticle extends Component {
   state = {
     article: {},
     isLoading: true,
-    error: null
+    articleError: null
   };
 
   componentDidMount() {
