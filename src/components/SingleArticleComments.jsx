@@ -58,7 +58,8 @@ export default class SingleArticleComments extends Component {
   };
 
   fetchSingleArticleComments = () => {
-    api.getSingleArticleComments(this.props.id).then(response => {
+    const { id } = this.props;
+    api.getSingleArticleComments(id).then(response => {
       this.setState({
         comments: response,
         isLoading: false
