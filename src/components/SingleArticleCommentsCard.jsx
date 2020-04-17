@@ -4,6 +4,7 @@ import Voter from "./Voter";
 
 const SingleArticleCommentsCard = props => {
   const { author, body, comment_id, votes, created_at } = props.comment;
+  const { removeCommentFromList } = props;
   return (
     <div>
       <p>{body}</p>
@@ -12,7 +13,7 @@ const SingleArticleCommentsCard = props => {
       <Voter votes={votes} id={comment_id} type={"comments"} />
       <br></br>
       {author === props.username ? (
-        <button onClick={() => props.removeCommentFromList(comment_id)}>
+        <button onClick={() => removeCommentFromList(comment_id)}>
           DELETE Comment
         </button>
       ) : null}
