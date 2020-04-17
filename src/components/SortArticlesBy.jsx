@@ -7,9 +7,10 @@ class SortArticlesBy extends Component {
 
   handleChange = event => {
     const { value } = event.target;
+    const { selection } = this.state;
+    const { sortArticlesBySelection } = this.props;
     this.setState({ selection: value }, () => {
-      if (this.state.selection !== "")
-        this.props.sortArticlesBySelection(this.state.selection);
+      if (selection !== "") sortArticlesBySelection(selection);
     });
   };
 
