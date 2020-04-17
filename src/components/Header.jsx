@@ -4,9 +4,7 @@ const Header = props => {
   return (
     <header>
       <h1>Northcoders News</h1>
-      <p>
-        <i className="far fa-user"></i> {props.username}{" "}
-      </p>
+      <p>Logged in as user : {props.username} </p>
     </header>
   );
 };
