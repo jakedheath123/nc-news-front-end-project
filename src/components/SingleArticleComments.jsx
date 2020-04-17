@@ -16,15 +16,16 @@ export default class SingleArticleComments extends Component {
 
   render() {
     const { isLoading, comments } = this.state;
+    const { username, id } = this.props;
     if (isLoading) return <Loader />;
     return (
       <section>
         <br></br>
         <h2>Comments:</h2>
         <PostCommentToArticle
-          article_id={this.props.id}
+          article_id={id}
           addCommentToList={this.addCommentToList}
-          username={this.props.username}
+          username={username}
         />
         <hr></hr>
         {comments.map(comment => {
