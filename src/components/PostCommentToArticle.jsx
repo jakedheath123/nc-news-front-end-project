@@ -3,7 +3,6 @@ import * as api from "../utils/api";
 
 class PostCommentToArticle extends Component {
   state = {
-    user: "",
     comment: ""
   };
 
