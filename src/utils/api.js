@@ -4,22 +4,12 @@ const request = axios.create({
   baseURL: "https://nc-news-be-project.herokuapp.com/api"
 });
 
-export const getAllArticles = topic => {
+export const getAllArticles = (topic, author, sort_by) => {
   return request
     .get("/articles", {
       params: {
-        topic
-      }
-    })
-    .then(({ data: { articles } }) => {
-      return articles;
-    });
-};
-
-export const sortArticles = sort_by => {
-  return request
-    .get("/articles", {
-      params: {
+        topic,
+        author,
         sort_by
       }
     })
@@ -28,19 +18,31 @@ export const sortArticles = sort_by => {
     });
 };
 
+// export const sortArticles = sort_by => {
+//   return request
+//     .get("/articles", {
+//       params: {
+//         sort_by
+//       }
+//     })
+//     .then(({ data: { articles } }) => {
+//       return articles;
+//     });
+// };
+
 export const getAllTopics = () => {
   return request.get("/topics").then(({ data: { topics } }) => {
     return topics;
   });
 };
 
-export const getArticlesByAuthor = author => {
-  return request
-    .get(`/articles?author=${author}`)
-    .then(({ data: { articles } }) => {
-      return articles;
-    });
-};
+// export const getArticlesByAuthor = author => {
+//   return request
+//     .get(`/articles?author=${author}`)
+//     .then(({ data: { articles } }) => {
+//       return articles;
+//     });
+// };
 
 export const getSingleArticle = article_id => {
   return request
