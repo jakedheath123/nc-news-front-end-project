@@ -2,7 +2,7 @@ import React from "react";
 import { dateConverter } from "../utils/utils";
 import Voter from "./Voter";
 
-const SingleArticleCommentsCard = props => {
+const CommentsCard = props => {
   const { author, body, comment_id, votes, created_at } = props.comment;
   const { removeCommentFromList, username } = props;
   return (
@@ -22,4 +22,4 @@ const SingleArticleCommentsCard = props => {
   );
 };
 
-export default SingleArticleCommentsCard;
+export default CommentsCard;
