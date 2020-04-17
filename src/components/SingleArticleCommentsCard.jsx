@@ -4,7 +4,7 @@ import Voter from "./Voter";
 
 const SingleArticleCommentsCard = props => {
   const { author, body, comment_id, votes, created_at } = props.comment;
-  const { removeCommentFromList } = props;
+  const { removeCommentFromList, username } = props;
   return (
     <div>
       <p>{body}</p>
@@ -12,7 +12,7 @@ const SingleArticleCommentsCard = props => {
       <h4>Posted: {dateConverter(created_at)}</h4>
       <Voter votes={votes} id={comment_id} type={"comments"} />
       <br></br>
-      {author === props.username ? (
+      {author === username ? (
         <button onClick={() => removeCommentFromList(comment_id)}>
           DELETE Comment
         </button>
