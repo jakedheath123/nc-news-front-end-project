@@ -22,10 +22,11 @@ export default class NavBar extends Component {
             </Link>
           </li>
           {topics.map(topic => {
+            const { slug } = topic;
             return (
-              <li key={topic.slug}>
-                <Link className="link" to={`/topics/${topic.slug}`}>
-                  Topic: {topic.slug}
+              <li key={slug}>
+                <Link className="link" to={`/topics/${slug}`}>
+                  Topic: {slug}
                 </Link>
               </li>
             );
