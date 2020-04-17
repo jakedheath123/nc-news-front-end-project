@@ -15,12 +15,13 @@ class SortArticlesBy extends Component {
   };
 
   render() {
+    const { selection } = this.state;
     return (
       <>
         <form>
           <label>
             Sort By:
-            <select onChange={this.handleChange} value={this.state.selection}>
+            <select onChange={this.handleChange} value={selection}>
               <option></option>
               <option name="dateCreated" value="created_at">
                 Date Published
