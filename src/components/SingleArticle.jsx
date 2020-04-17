@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
 import SingleArticleCard from "./SingleArticleCard";
-import SingleArticleComments from "./SingleArticleComments";
+import Comments from "./Comments";
 import ViewToggler from "./ViewToggler";
 import Loader from "./Loader";
 import ErrorDisplay from "./ErrorDisplay";
@@ -30,7 +30,7 @@ export default class SingleArticle extends Component {
         <SingleArticleCard article={article} />
         <br></br>
         <ViewToggler>
-          <SingleArticleComments
+          <Comments
             fetchSingleArticle={this.fetchSingleArticle}
             id={article_id}
             username={username}
