@@ -82,13 +82,20 @@ class ArticleList extends Component {
     });
   };
 
-  sortArticlesBySelection = selection => {
-    api.sortArticles(selection).then(response => {
-      this.setState({
-        articles: response,
-        isLoading: false
-      });
-    });
+  sortArticlesBySelection = sort_by => {
+    this.setState(
+      {
+        sort_by
+      },
+      () => {
+        api.sortArticles(sort_by).then(response => {
+          this.setState({
+            articles: response,
+            isLoading: false
+          });
+        });
+      }
+    );
   };
 
   resetAuthors = () => {
