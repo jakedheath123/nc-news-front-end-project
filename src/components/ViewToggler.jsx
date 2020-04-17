@@ -12,12 +12,14 @@ class ViewToggler extends Component {
   };
 
   render() {
+    const { isVisible } = this.state;
+    const { children } = this.props;
     return (
       <>
         <button onClick={this.handleClick}>
-          {this.state.isVisible ? "Hide Comments" : "Show Comments"}
+          {isVisible ? "Hide Comments" : "Show Comments"}
         </button>
-        {this.state.isVisible && this.props.children}
+        {isVisible && children}
       </>
     );
   }
