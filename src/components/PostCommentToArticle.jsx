@@ -15,16 +15,15 @@ class PostCommentToArticle extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const { user, comment } = this.state;
+    const { comment } = this.state;
     const newComment = {
-      username: user,
+      username: this.props.username,
       body: comment
     };
     api.postComment(this.props.article_id, newComment).then(comment => {
       this.props.addCommentToList(comment);
     });
     this.setState({
-      user: "",
       comment: ""
     });
   };
