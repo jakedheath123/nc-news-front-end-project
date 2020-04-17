@@ -10,7 +10,9 @@ class ArticleList extends Component {
   state = {
     articles: [],
     isLoading: true,
-    searchError: null
+    searchError: null,
+    sort_by: "created_at",
+    author: undefined
   };
 
   componentDidMount() {
@@ -45,25 +47,30 @@ class ArticleList extends Component {
   }
 
   searchByAuthor = author => {
-    api
-      .getArticlesByAuthor(author)
-      .then(response => {
-        this.setState({
-          articles: response,
-          isLoading: false
+    this.setState(
+      {
+        author
+      },
+      () => {
+        api.getArticlesByAuthor(author).then(response => {
+          this.setState({
+            articles: response,
+            isLoading: false
+          });
         });
-      })
-      .catch(error => {
-        const { msg } = error.response.data;
-        const { status } = error.response;
-        this.setState({
-          searchError: {
-            status,
-            msg
-          },
-          isLoading: false
-        });
-      });
+      }
+    );
+    // .catch(error => {
+    //   const { msg } = error.response.data;
+    //   const { status } = error.response;
+    //   this.setState({
+    //     searchError: {
+    //       status,
+    //       msg
+    //     },
+    //     isLoading: false
+    //   });
+    // });
   };
 
   fetchAllArticles = () => {
