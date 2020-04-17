@@ -34,7 +34,7 @@ export default class SingleArticleComments extends Component {
               key={comment.comment_id}
               comment={comment}
               removeCommentFromList={this.removeCommentFromList}
-              username={this.props.username}
+              username={username}
             />
           );
         })}
