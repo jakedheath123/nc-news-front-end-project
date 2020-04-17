@@ -38,6 +38,7 @@ class PostCommentToArticle extends Component {
         <br></br>
         <label>
           Comment:
+          <br></br>
           <textarea
             name="comment"
             value={comment}
