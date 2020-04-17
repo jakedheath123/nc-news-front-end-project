@@ -30,7 +30,7 @@ class PostCommentToArticle extends Component {
   };
 
   render() {
-    const { user, comment } = this.state;
+    const { comment } = this.state;
 
     return (
       <form className="post-comment-form" onSubmit={this.handleSubmit}>
