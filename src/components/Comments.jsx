@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import * as api from "../utils/api";
-import SingleArticleCommentsCard from "./SingleArticleCommentsCard";
+import CommentsCard from "./CommentsCard";
 import PostCommentToArticle from "./PostCommentToArticle";
 import Loader from "./Loader";
 
-export default class SingleArticleComments extends Component {
+export default class Comments extends Component {
   state = {
     comments: [],
     isLoading: true
@@ -31,7 +31,7 @@ export default class SingleArticleComments extends Component {
         {comments.map(comment => {
           const { comment_id } = comment;
           return (
-            <SingleArticleCommentsCard
+            <CommentsCard
               key={comment_id}
               comment={comment}
               removeCommentFromList={this.removeCommentFromList}
