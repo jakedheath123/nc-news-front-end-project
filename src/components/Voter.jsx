@@ -7,12 +7,13 @@ class Voter extends Component {
   };
 
   handleClick = inc_votes => {
+    const { id, type } = this.props;
     this.setState(currentState => {
       return {
         optimisticVotes: currentState.optimisticVotes + inc_votes
       };
     });
-    api.patchVotes(inc_votes, this.props.id, this.props.type);
+    api.patchVotes(inc_votes, id, type);
   };
 
   render() {
