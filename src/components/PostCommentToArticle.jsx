@@ -33,16 +33,7 @@ class PostCommentToArticle extends Component {
 
     return (
       <form className="post-comment-form" onSubmit={this.handleSubmit}>
-        <label>
-          UserName: {this.props.username}
-          {/* <input
-            name="user"
-            value={user}
-            placeholder="Name"
-            required
-            onChange={this.handleChange}
-          /> */}
-        </label>
+        <label>UserName: {this.props.username}</label>
         <br></br>
         <label>
           Comment:
