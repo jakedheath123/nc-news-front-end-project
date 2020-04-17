@@ -18,6 +18,10 @@ ul {
   margin: 5%;
 }
 
+.post-comment-form textarea {
+  width: 50%;
+}
+
 html {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
