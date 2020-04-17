@@ -19,6 +19,12 @@ class ArticleList extends Component {
     this.fetchAllArticles();
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.slug !== this.props.slug) {
+      this.fetchAllArticles(this.props.slug);
+    }
+  }
+
   render() {
     const { articles, isLoading, searchError } = this.state;
     if (isLoading) return <Loader />;
@@ -52,34 +58,49 @@ class ArticleList extends Component {
         author
       },
       () => {
-        api.getArticlesByAuthor(author).then(response => {
-          this.setState({
-            articles: response,
-            isLoading: false
+        api
+          .getAllArticles(this.props.slug, author, this.state.sort_by)
+          .then(response => {
+            this.setState({
+              articles: response,
+              isLoading: false
+            });
+          })
+          .catch(error => {
+            const { msg } = error.response.data;
+            const { status } = error.response;
+            this.setState({
+              searchError: {
+                status,
+                msg
+              },
+              isLoading: false
+            });
           });
-        });
       }
     );
-    // .catch(error => {
-    //   const { msg } = error.response.data;
-    //   const { status } = error.response;
-    //   this.setState({
-    //     searchError: {
-    //       status,
-    //       msg
-    //     },
-    //     isLoading: false
-    //   });
-    // });
   };
 
   fetchAllArticles = () => {
-    api.getAllArticles().then(response => {
-      this.setState({
-        articles: response,
-        isLoading: false
+    api
+      .getAllArticles(this.props.slug)
+      .then(response => {
+        this.setState({
+          articles: response,
+          isLoading: false
+        });
+      })
+      .catch(error => {
+        const { msg } = error.response.data;
+        const { status } = error.response;
+        this.setState({
+          searchError: {
+            status,
+            msg
+          },
+          isLoading: false
+        });
       });
-    });
   };
 
   sortArticlesBySelection = sort_by => {
@@ -88,18 +109,28 @@ class ArticleList extends Component {
         sort_by
       },
       () => {
-        api.sortArticles(sort_by).then(response => {
-          this.setState({
-            articles: response,
-            isLoading: false
+        api
+          .getAllArticles(this.props.slug, this.state.author, sort_by)
+          .then(response => {
+            this.setState({
+              articles: response,
+              isLoading: false
+            });
           });
-        });
       }
     );
   };
 
   resetAuthors = () => {
-    this.fetchAllArticles();
+    this.setState(
+      {
+        sort_by: "created_at",
+        author: undefined
+      },
+      () => {
+        this.fetchAllArticles();
+      }
+    );
   };
 }
 
