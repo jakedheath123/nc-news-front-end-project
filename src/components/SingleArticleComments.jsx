@@ -29,9 +29,10 @@ export default class SingleArticleComments extends Component {
         />
         <hr></hr>
         {comments.map(comment => {
+          const { comment_id } = comment;
           return (
             <SingleArticleCommentsCard
-              key={comment.comment_id}
+              key={comment_id}
               comment={comment}
               removeCommentFromList={this.removeCommentFromList}
               username={username}
