@@ -19,6 +19,7 @@ export default class SingleArticle extends Component {
 
   render() {
     const { article, isLoading, articleError } = this.state;
+    const { article_id, username } = this.props;
     if (isLoading) return <Loader />;
     if (articleError)
       return (
@@ -31,8 +32,8 @@ export default class SingleArticle extends Component {
         <ViewToggler>
           <SingleArticleComments
             fetchSingleArticle={this.fetchSingleArticle}
-            id={this.props.article_id}
-            username={this.props.username}
+            id={article_id}
+            username={username}
           />
         </ViewToggler>
       </main>
