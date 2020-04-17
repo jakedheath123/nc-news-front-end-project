@@ -14,7 +14,9 @@ export default class SearchArticleByAuthor extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.searchByAuthor(this.state.input);
+    const { searchByAuthor } = this.props;
+    const { input } = this.state;
+    searchByAuthor(input);
     this.setState({
       input: ""
     });
