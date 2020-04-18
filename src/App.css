@@ -9,6 +9,9 @@
 ul {
   padding: 0%;
 }
+select {
+  background-color: var(--light);
+}
 
 .search-form button {
   margin: 1%;
