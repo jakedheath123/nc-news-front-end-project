@@ -26,7 +26,7 @@ export default class NavBar extends Component {
             return (
               <li key={slug}>
                 <Link className="link" to={`/topics/${slug}`}>
-                  Topic: {slug}
+                  {slug}
                 </Link>
               </li>
             );
