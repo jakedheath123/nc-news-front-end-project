@@ -7,8 +7,7 @@ import Loader from "./Loader";
 export default class Comments extends Component {
   state = {
     comments: [],
-    isLoading: true,
-    isDeleted: false
+    isLoading: true
   };
 
   componentDidMount() {
@@ -16,14 +15,13 @@ export default class Comments extends Component {
   }
 
   render() {
-    const { isLoading, comments, isDeleted } = this.state;
+    const { isLoading, comments } = this.state;
     const { username, id } = this.props;
     if (isLoading) return <Loader />;
     return (
       <section>
         <br></br>
         <h2>Comments:</h2>
-        {isDeleted ? <p>Comment Successfully Deleted!</p> : null}
         <PostCommentToArticle
           article_id={id}
           addCommentToList={this.addCommentToList}
@@ -78,8 +76,7 @@ export default class Comments extends Component {
               return comment.comment_id !== id;
             })
           ],
-          isLoading: false,
-          isDeleted: true
+          isLoading: false
         },
         () => {
           this.props.fetchSingleArticle();
