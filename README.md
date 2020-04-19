@@ -72,9 +72,9 @@
           <li>react-scripts: 3.4.1</li>
         </ul>
         <h2>Links</h2>
-        <p>Please click here for deployed website:</p>
+        <p>Please click here for deployed website version:</p>
         <p>[netlify] https://nc-news-fe-project.netlify.app</p>
-        <p>Please click here for deployed API:</p>
+        <p>Please click here for deployed API version:</p>
         <p>[Heroku] https://nc-news-be-project.herokuapp.com/api</p>
         <h2>Authors</h2>
         <ul>
