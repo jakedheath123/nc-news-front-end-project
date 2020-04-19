@@ -44,7 +44,10 @@
       </li>
     </ul>
     <h2>Installation</h2>
-    <p>These instructions will provide you with a copy of the project on your local machine. Using the command terminal, navigate to the directory where you want the repository to be saved.
+    <p>These instructions will provide you with a copy of the project on your local machine. 
+    <br>
+    <br>
+    Using the command terminal, navigate to the directory where you want the repository to be saved.
       In the terminal, type:
       </p>
       <ol>
@@ -53,7 +56,10 @@
           <li>npm start</li>
       </ol>
       <h3>Prerequisites</h3>
-      <p>Node.js version needs to be v12.13.1 or higher. Dependencies that need to be installed to run the application:
+      <p>Node.js version needs to be v12.13.1 or higher. 
+    <br>
+    <br>
+    Dependencies that need to be installed to run the application:
         </p>
          <ul>
           <li>@reach/router: ^1.3.3</li>
