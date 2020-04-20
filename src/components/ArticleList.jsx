@@ -19,9 +19,19 @@ class ArticleList extends Component {
     this.fetchAllArticles();
   }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.slug !== this.props.slug) {
-      this.fetchAllArticles(this.props.slug);
+  componentDidUpdate(prevProps, prevState) {
+    const { slug } = this.props;
+    const { author, sort_by } = this.state;
+    if (prevProps.slug !== slug) {
+      this.fetchAllArticles(slug);
+    }
+
+    if (prevState.sort_by !== sort_by) {
+      this.fetchAllArticles(slug, author, sort_by);
+    }
+
+    if (prevState.author !== author) {
+      this.fetchAllArticles(slug, author, sort_by);
     }
   }
 
@@ -53,37 +63,38 @@ class ArticleList extends Component {
   }
 
   searchByAuthor = author => {
-    this.setState(
-      {
-        author
-      },
-      () => {
-        api
-          .getAllArticles(this.props.slug, author, this.state.sort_by)
-          .then(response => {
-            this.setState({
-              articles: response,
-              isLoading: false
-            });
-          })
-          .catch(error => {
-            const { msg } = error.response.data;
-            const { status } = error.response;
-            this.setState({
-              searchError: {
-                status,
-                msg
-              },
-              isLoading: false
-            });
-          });
-      }
-    );
+    this.setState({
+      author
+    });
   };
+  // ,
+  // () => {
+  //   api
+  //     .getAllArticles(this.props.slug, author, this.state.sort_by)
+  //     .then(response => {
+  //       this.setState({
+  //         articles: response,
+  //         isLoading: false
+  //       });
+  //     })
+  //     .catch(error => {
+  //       const { msg } = error.response.data;
+  //       const { status } = error.response;
+  //       this.setState({
+  //         searchError: {
+  //           status,
+  //           msg
+  //         },
+  //         isLoading: false
+  //       });
+  //     });
+  // }
 
   fetchAllArticles = () => {
+    const { slug } = this.props;
+    const { author, sort_by } = this.state;
     api
-      .getAllArticles(this.props.slug)
+      .getAllArticles(slug, author, sort_by)
       .then(response => {
         this.setState({
           articles: response,
@@ -104,22 +115,21 @@ class ArticleList extends Component {
   };
 
   sortArticlesBySelection = sort_by => {
-    this.setState(
-      {
-        sort_by
-      },
-      () => {
-        api
-          .getAllArticles(this.props.slug, this.state.author, sort_by)
-          .then(response => {
-            this.setState({
-              articles: response,
-              isLoading: false
-            });
-          });
-      }
-    );
+    this.setState({
+      sort_by
+    });
   };
+  // ,
+  // () => {
+  //   api
+  //     .getAllArticles(this.props.slug, this.state.author, sort_by)
+  //     .then(response => {
+  //       this.setState({
+  //         articles: response,
+  //         isLoading: false
+  //       });
+  //     });
+  // }
 
   resetAuthors = () => {
     this.setState(
