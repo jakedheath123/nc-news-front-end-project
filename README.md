@@ -78,5 +78,5 @@
         <p>[Heroku] https://nc-news-be-project.herokuapp.com/api</p>
         <h2>Authors</h2>
         <ul>
-          <li>Jake Heath - <a href=“https://github.com/jakedheath123”>jakedheath123</a></li>
+          <li>Jake Heath</li>
         </ul>
