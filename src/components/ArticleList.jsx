@@ -23,15 +23,23 @@ class ArticleList extends Component {
     const { slug } = this.props;
     const { author, sort_by } = this.state;
     if (prevProps.slug !== slug) {
-      this.fetchAllArticles(slug);
+      this.setState(
+        {
+          sort_by: "created_at",
+          author: undefined
+        },
+        () => {
+          this.fetchAllArticles();
+        }
+      );
     }
 
     if (prevState.sort_by !== sort_by) {
-      this.fetchAllArticles(slug, author, sort_by);
+      this.fetchAllArticles();
     }
 
     if (prevState.author !== author) {
-      this.fetchAllArticles(slug, author, sort_by);
+      this.fetchAllArticles();
     }
   }
 
