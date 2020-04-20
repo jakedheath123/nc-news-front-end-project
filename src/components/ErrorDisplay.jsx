@@ -10,7 +10,7 @@ const ErrorDisplay = props => {
       {msg === "Author not found" ? (
         <>
           <h3>Available authors:</h3>
-          <ul>
+          <ul className="error-list">
             <li>cooljmessy</li>
             <li>grumpy19</li>
             <li>happyamy2016</li>
