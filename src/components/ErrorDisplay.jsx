@@ -7,6 +7,19 @@ const ErrorDisplay = props => {
       <h2>
         Status : {status} - {msg}
       </h2>
+      {msg === "Author not found" ? (
+        <>
+          <h3>Available authors:</h3>
+          <ul>
+            <li>cooljmessy</li>
+            <li>grumpy19</li>
+            <li>happyamy2016</li>
+            <li>jessjelly</li>
+            <li>tickle122</li>
+            <li>weegembump</li>
+          </ul>
+        </>
+      ) : null}
     </section>
   );
 };
