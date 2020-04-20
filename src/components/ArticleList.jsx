@@ -70,34 +70,6 @@ class ArticleList extends Component {
     );
   }
 
-  searchByAuthor = author => {
-    this.setState({
-      author
-    });
-  };
-  // ,
-  // () => {
-  //   api
-  //     .getAllArticles(this.props.slug, author, this.state.sort_by)
-  //     .then(response => {
-  //       this.setState({
-  //         articles: response,
-  //         isLoading: false
-  //       });
-  //     })
-  //     .catch(error => {
-  //       const { msg } = error.response.data;
-  //       const { status } = error.response;
-  //       this.setState({
-  //         searchError: {
-  //           status,
-  //           msg
-  //         },
-  //         isLoading: false
-  //       });
-  //     });
-  // }
-
   fetchAllArticles = () => {
     const { slug } = this.props;
     const { author, sort_by } = this.state;
@@ -122,22 +94,17 @@ class ArticleList extends Component {
       });
   };
 
+  searchByAuthor = author => {
+    this.setState({
+      author
+    });
+  };
+
   sortArticlesBySelection = sort_by => {
     this.setState({
       sort_by
     });
   };
-  // ,
-  // () => {
-  //   api
-  //     .getAllArticles(this.props.slug, this.state.author, sort_by)
-  //     .then(response => {
-  //       this.setState({
-  //         articles: response,
-  //         isLoading: false
-  //       });
-  //     });
-  // }
 
   resetAuthors = () => {
     this.setState(
