@@ -48,28 +48,29 @@
           npm I
           npm start
       ```
-      <h3>Prerequisites</h3>
-      <p>Node.js version needs to be v12.13.1 or higher.
-      <br>
-      <br>
+      ## Prerequisites
+      
+      Node.js version needs to be v12.13.1 or higher.
+      
+      
       Dependencies that need to be installed to run the application:
-        </p>
-         <ul>
-          <li>@reach/router: ^1.3.3</li>
-          <li>@testing-library/jest-dom: ^4.2.4</li>
-          <li>@testing-library/react”: ^9.5.0</li>
-          <li>@testing-library/user-event”: ^7.2.1</li>
-          <li>axios: ^0.19.2</li>
-          <li>react: ^16.13.1</li>
-          <li>react-dom: ^16.13.1</li>
-          <li>react-scripts: 3.4.1</li>
-        </ul>
-        <h2>Links</h2>
-        <p>Please click here for deployed website:</p>
-        <p>[netlify] https://nc-news-fe-project.netlify.app</p>
-        <p>Please click here for deployed API:</p>
-        <p>[Heroku] https://nc-news-be-project.herokuapp.com/api</p>
-        <h2>Authors</h2>
-        <ul>
-          <li>Jake Heath</li>
-        </ul>
+        
+          - @reach/router: ^1.3.3
+          - @testing-library/jest-dom: ^4.2.4
+          - @testing-library/react”: ^9.5.0
+          - @testing-library/user-event”: ^7.2.1
+          - axios: ^0.19.2
+          - react: ^16.13.1
+          - react-dom: ^16.13.1
+          - react-scripts: 3.4.1
+        
+        ## Links
+        Please click here for deployed website:
+        [netlify] https://nc-news-fe-project.netlify.app
+        Please click here for deployed API:
+        [Heroku] https://nc-news-be-project.herokuapp.com/api
+        
+        ## Authors
+        
+         - Jake Heath
+        
