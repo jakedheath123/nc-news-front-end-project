@@ -37,15 +37,15 @@
    
 ## Installation
     
-    These instructions will provide you with a copy of the project on your local machine.
-   
-    Using the command terminal, navigate to the directory where you want the repository to be saved.
-      In the terminal, type:
+These instructions will provide you with a copy of the project on your local machine.
+  
+Using the command terminal, navigate to the directory where you want the repository to be saved.
+In the terminal, type:
       
 
-git clone “Repository URL”
-          npm I
-          npm start
+          1. git clone “Repository URL”
+          2. npm i
+          3. npm start
 
 
 ## Prerequisites
