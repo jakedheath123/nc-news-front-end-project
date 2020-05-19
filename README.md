@@ -22,12 +22,10 @@
       - View an individual article
       - View an individual article’s comments
       - Search for all articles written by a specific user
-      
-        Sort articles by :
+      - Sort articles by :
           - Date Created (default)
           - Comment Count
           - Votes
-          
       - Post a new comment to an existing article (as a default logged in user)
       - Delete only your own comments (as a default logged in user)
       - Vote on an article and immediately see the change (increase or decrease
