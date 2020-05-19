@@ -76,5 +76,5 @@ Please click here for deployed API:
         
 ## Authors
         
-- Jake Heath
+- [Jake Heath](https://github.com/jakedheath123)
         
