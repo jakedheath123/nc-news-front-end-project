@@ -41,12 +41,12 @@
    
     Using the command terminal, navigate to the directory where you want the repository to be saved.
       In the terminal, type:
-     
-      ```
+ ```
         git clone “Repository URL”
           npm I
           npm start
-      ```
+```
+
 ## Prerequisites
       
       Node.js version needs to be v12.13.1 or higher.
