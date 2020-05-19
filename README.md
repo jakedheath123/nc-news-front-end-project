@@ -1,3 +1,4 @@
+
 # nc-news-front-end-project
 
 ## Overview
@@ -33,7 +34,7 @@
         by maximum of 1)
    - Vote on a comment and immediately see the change (increase or decrease
         by maximum of 1)
-     
+   
    
 ## Installation
     
@@ -50,27 +51,30 @@ In the terminal, type:
 
 ## Prerequisites
       
-      Node.js version needs to be v12.13.1 or higher.
+Node.js version needs to be v12.13.1 or higher.   
       
-      
-      Dependencies that need to be installed to run the application:
-        
-          - @reach/router: ^1.3.3
-          - @testing-library/jest-dom: ^4.2.4
-          - @testing-library/react”: ^9.5.0
-          - @testing-library/user-event”: ^7.2.1
-          - axios: ^0.19.2
-          - react: ^16.13.1
-          - react-dom: ^16.13.1
-          - react-scripts: 3.4.1
-        
+Dependencies that need to be installed to run the application:
+
+``` 
+@reach/router: ^1.3.3
+@testing-library/jest-dom: ^4.2.4
+@testing-library/react”: ^9.5.0
+@testing-library/user-event”: ^7.2.1
+axios: ^0.19.2
+react: ^16.13.1
+react-dom: ^16.13.1
+react-scripts: 3.4.1
+```   
+
 ## Links
-        Please click here for deployed website:
-        [netlify] https://nc-news-fe-project.netlify.app
-        Please click here for deployed API:
-        [Heroku] https://nc-news-be-project.herokuapp.com/api
+
+Please click here for deployed website:
+- [netlify] https://nc-news-fe-project.netlify.app
+        
+Please click here for deployed API:
+- [Heroku] https://nc-news-be-project.herokuapp.com/api
         
 ## Authors
         
-         - Jake Heath
+- Jake Heath
         
