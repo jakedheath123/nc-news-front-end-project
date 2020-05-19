@@ -68,10 +68,10 @@ react-scripts: 3.4.1
 
 ## Links
 
-Please click here for deployed website:
+Please click here for hosted website:
 - [netlify] https://nc-news-fe-project.netlify.app
         
-Please click here for deployed API:
+Please click here for hosted API:
 - [Heroku] https://nc-news-be-project.herokuapp.com/api
         
 ## Authors
