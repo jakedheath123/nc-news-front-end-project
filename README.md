@@ -4,7 +4,7 @@
 ## Overview
     
   The purpose of this front-end project was to create a single page
-      application with React, using HTTP request types to interact with my
+      application with React, using HTTP request types to interact with my own
       back-end API and HTTP response codes to update the UI accordingly. The
       application was to also be fully responsive across different screen
       resolutions, and consolidate understanding of making a C.R.U.D application
