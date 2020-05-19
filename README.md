@@ -4,7 +4,7 @@
 ## Overview
     
   The purpose of this front-end project was to create a single page
-      application with React, using HTTP request types to interact with my
+      application with React, using HTTP request types to interact with my own
       back-end API and HTTP response codes to update the UI accordingly. The
       application was to also be fully responsive across different screen
       resolutions, and consolidate understanding of making a C.R.U.D application
@@ -68,10 +68,10 @@ react-scripts: 3.4.1
 
 ## Links
 
-Please click here for deployed website:
+Please click here for hosted website:
 - [netlify] https://nc-news-fe-project.netlify.app
         
-Please click here for deployed API:
+Please click here for hosted API:
 - [Heroku] https://nc-news-be-project.herokuapp.com/api
         
 ## Authors
