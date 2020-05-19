@@ -1,4 +1,5 @@
 # nc-news-front-end-project
+
 ## Overview
     
       The purpose of this front-end project was to create a single page
@@ -8,7 +9,7 @@
       resolutions, and consolidate understanding of making a C.R.U.D application
       from a front end perspective.
     
-    ## Description
+## Description
    
       Northcoders News has articles which are divided into topics. Each article
       has user curated ratings and can be up or down voted using the API. Users
@@ -34,7 +35,7 @@
         by maximum of 1)
      
    
-    ## Installation
+## Installation
     
     These instructions will provide you with a copy of the project on your local machine.
    
@@ -46,7 +47,7 @@
           npm I
           npm start
       ```
-      ## Prerequisites
+## Prerequisites
       
       Node.js version needs to be v12.13.1 or higher.
       
@@ -62,13 +63,13 @@
           - react-dom: ^16.13.1
           - react-scripts: 3.4.1
         
-        ## Links
+## Links
         Please click here for deployed website:
         [netlify] https://nc-news-fe-project.netlify.app
         Please click here for deployed API:
         [Heroku] https://nc-news-be-project.herokuapp.com/api
         
-        ## Authors
+## Authors
         
          - Jake Heath
         
