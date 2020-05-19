@@ -2,7 +2,7 @@
 
 ## Overview
     
-      The purpose of this front-end project was to create a single page
+  The purpose of this front-end project was to create a single page
       application with React, using HTTP request types to interact with my
       back-end API and HTTP response codes to update the UI accordingly. The
       application was to also be fully responsive across different screen
@@ -11,14 +11,14 @@
     
 ## Description
    
-      Northcoders News has articles which are divided into topics. Each article
+   Northcoders News has articles which are divided into topics. Each article
       has user curated ratings and can be up or down voted using the API. Users
       can also add comments about an article. Comments can also be up or down
       voted. A user can add comments and remove any comments which they have
       added. As a user, you are able to:
    
     
-      - View a list of all articles
+   - View a list of all articles
       - View a page for each topic with a list of related articles
       - View an individual article
       - View an individual article’s comments
@@ -41,11 +41,12 @@
    
     Using the command terminal, navigate to the directory where you want the repository to be saved.
       In the terminal, type:
- ```
-        git clone “Repository URL”
+      
+
+git clone “Repository URL”
           npm I
           npm start
-```
+
 
 ## Prerequisites
       
