@@ -40,14 +40,22 @@
     
 These instructions will provide you with a copy of the project on your local machine.
   
-Using the command terminal, navigate to the directory where you want the repository to be saved.
-In the terminal, type:
-      
-
-          1. git clone “Repository URL”
-          2. npm i
-          3. npm start
-
+Using the command terminal, navigate to the directory where you want the repository to be saved. Make a clone of the project by copy/pasting the below in your terminal:
+```
+git clone https://github.com/jakedheath123/nc-news-front-end-project.git
+```      
+Move into the app folder like so:
+```
+cd nc-news-front-end-project
+```
+Install the project dependencies:
+```
+npm install
+```
+After that run command npm start as below and a test server will run on localhost:3000:
+```
+npm start
+```
 
 ## Prerequisites
       
