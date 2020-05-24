@@ -35,29 +35,10 @@
    - Vote on a comment and immediately see the change (increase or decrease
         by maximum of 1)
    
-   
-## Installation
-    
+## Getting Started
 These instructions will provide you with a copy of the project on your local machine.
-  
-Using the command terminal, navigate to the directory where you want the repository to be saved. Make a clone of the project by copy/pasting the below in your terminal:
-```
-git clone https://github.com/jakedheath123/nc-news-front-end-project.git
-```      
-Move into the app folder like so:
-```
-cd nc-news-front-end-project
-```
-Install the project dependencies:
-```
-npm install
-```
-After that run command npm start as below and a test server will run on localhost:3000:
-```
-npm start
-```
 
-## Prerequisites
+### Prerequisites
       
 Node.js version needs to be 12.13.1 or higher.   
       
@@ -74,6 +55,30 @@ react-dom: ^16.13.1
 react-scripts: 3.4.1
 ```   
 
+### Installation
+    
+Using the command terminal, navigate to the directory where you want the repository to be saved. Make a clone of the project by copy/pasting the below in your terminal:
+```
+git clone https://github.com/jakedheath123/nc-news-front-end-project.git
+```      
+Move into the app folder like so:
+```
+cd nc-news-front-end-project
+```
+Install the project dependencies:
+```
+npm install
+```
+After that run command npm start as below and a test server will run on localhost:3000:
+```
+npm start
+```
+## Built With
+- [React](https://reactjs.org/)
+- [Axios](https://www.npmjs.com/package/axios)
+- [netlify](https://www.netlify.com/)
+
+
 ## Links
 
 Please click here for deployed website:
@@ -84,5 +89,5 @@ Please click here for deployed API:
         
 ## Authors
         
-- [Jake Heath](https://github.com/jakedheath123)
+- Jake Heath - *Initial work* - [GitHub](https://github.com/jakedheath123)
         
