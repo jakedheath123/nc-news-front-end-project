@@ -1,5 +1,5 @@
 
-# Front End Northcoders News Project
+# Northcoders News
 
 ## Overview
     
