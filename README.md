@@ -77,6 +77,8 @@ npm start
 - [React](https://reactjs.org/)
 - [Axios](https://www.npmjs.com/package/axios)
 - [netlify](https://www.netlify.com/)
+- HTML / HTML5
+- Media Queries
 
 
 ## Links
