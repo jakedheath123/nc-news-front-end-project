@@ -18,7 +18,7 @@ export default class App extends Component {
       <div className="wrapper">
         <Header username={username} />
         <NavBar />
-        <Router>
+        <Router primary={false}>
           <ArticleList path="/" />
           <ArticleList path="/topics/:slug" />
           <SingleArticle path="/article/:article_id" username={username} />
