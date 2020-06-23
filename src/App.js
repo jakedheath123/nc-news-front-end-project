@@ -15,7 +15,7 @@ export default class App extends Component {
   render() {
     const { username } = this.state;
     return (
-      <div className="wrapper">
+      <div className="app">
         <Header username={username} />
         <NavBar />
         <Router primary={false}>
