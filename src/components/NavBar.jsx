@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
+
 import * as api from "../utils/api";
 
 export default class NavBar extends Component {

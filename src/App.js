@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import { Router } from "@reach/router";
+
 import "./App.css";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
-import { Router } from "@reach/router";
 import ArticleList from "./components/ArticleList";
 import SingleArticle from "./components/SingleArticle";
 import Footer from "./components/Footer";

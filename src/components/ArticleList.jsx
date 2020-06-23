@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import ArticleCard from "./ArticleCard";
 import * as api from "../utils/api";
 import SearchArticleByAuthor from "./SearchArticleByAuthor";
